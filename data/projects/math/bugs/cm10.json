@@ -1,0 +1,23 @@
+{
+	"id": "CM10",
+	"commit": {
+		"patch": "49444ee6a56caee4eddc32c24dd960dd3195f7fa",
+		"buggy": "73605560b9f0205ac641ec602145756305a41f79"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-beanutils-1.7.0.jar",
+		"commons-collections-2.0.jar",
+		"commons-discovery-0.4.jar",
+		"commons-lang-2.1.jar",
+		"commons-logging-1.1.1.jar",
+		"junit-4.10.jar"
+	],
+	"tests": [
+		"org.apache.commons.math3.stat.correlation.CovarianceTest"
+	]
+}

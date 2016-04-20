@@ -1,0 +1,15 @@
+{
+	"id": "PM2",
+	"commit": {
+		"patch": "318d66e1b170a3b57d54d7175cfb3e495f6d7fda",
+		"buggy": "183ad3388d0d80bb144ce6cab79e0080d785eee6"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"type": "precondition",
+	"dependencies": [
+		"junit-4.10.jar"
+	]
+}

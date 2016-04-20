@@ -1,0 +1,22 @@
+{
+	"id": "CL6",
+	"commit": {
+		"patch": "3c4f60d71bc4bee0158d713be93c2151411d2e98",
+		"buggy": "15d50cf864c13468d81c7b2370ac5c8a7dc26d16"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"java": {
+		"version": "1.7"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-4.10.jar",
+		"easymock-2.5.2.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.text.StrBuilderTest"
+	]
+}

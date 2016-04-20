@@ -1,0 +1,20 @@
+{
+	"id": "CM7",
+	"commit": {
+		"patch": "0596e3145c1a8a9c42185fe688c42b0830b64516",
+		"buggy": "90f6eba156d348202da0685a95a0ee1d8ec63382"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-beanutils-1.7.0.jar",
+		"commons-collections-2.0.jar",
+		"commons-discovery-0.4.jar",
+		"commons-lang-2.1.jar",
+		"commons-logging-1.1.1.jar",
+		"junit-4.10.jar"
+	]
+}

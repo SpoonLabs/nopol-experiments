@@ -1,0 +1,39 @@
+diff --git a/src/test/org/apache/commons/math/ode/nonstiff/GraggBulirschStoerStepInterpolatorTest.java b/src/test/org/apache/commons/math/ode/nonstiff/GraggBulirschStoerStepInterpolatorTest.java
+index cb2ec04..1944aba 100644
+--- a/src/test/org/apache/commons/math/ode/nonstiff/GraggBulirschStoerStepInterpolatorTest.java
++++ b/src/test/org/apache/commons/math/ode/nonstiff/GraggBulirschStoerStepInterpolatorTest.java
+@@ -39,20 +39,6 @@ public class GraggBulirschStoerStepInterpolatorTest
+     super(name);
+   }
+ 
+-  public void testDerivativesConsistency()
+-  throws DerivativeException, IntegratorException {
+-    TestProblem3 pb = new TestProblem3(0.9);
+-    double minStep   = 0;
+-    double maxStep   = pb.getFinalTime() - pb.getInitialTime();
+-    double absTolerance = 1.0e-8;
+-    double relTolerance = 1.0e-8;
+-
+-    GraggBulirschStoerIntegrator integ =
+-      new GraggBulirschStoerIntegrator(minStep, maxStep,
+-                                       absTolerance, relTolerance);
+-    checkDerivativesConsistency(integ, pb, 1.0e-8);
+-  }
+-
+   public void testSerialization()
+     throws DerivativeException, IntegratorException,
+            IOException, ClassNotFoundException {
+diff --git a/src/test/org/apache/commons/math/util/MathUtilsTest.java b/src/test/org/apache/commons/math/util/MathUtilsTest.java
+index dd99e91..de88117 100644
+--- a/src/test/org/apache/commons/math/util/MathUtilsTest.java
++++ b/src/test/org/apache/commons/math/util/MathUtilsTest.java
+@@ -291,7 +291,8 @@ public final class MathUtilsTest extends TestCase {
+         assertEquals(1, MathUtils.gcd(-a, c));
+         assertEquals(1, MathUtils.gcd(a, -c));
+         assertEquals(1, MathUtils.gcd(-a, -c));
+-
++    }
++    public void testGcd_1() {
+         assertEquals(3 * (1<<15), MathUtils.gcd(3 * (1<<20), 9 * (1<<15)));
+ 
+     }

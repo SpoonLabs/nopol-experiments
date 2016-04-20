@@ -1,0 +1,21 @@
+{
+	"id": "PL1",
+	"commit": {
+		"patch": "b16235ad108c4fcdb7117493394d26d2f0faeace",
+		"buggy": "de4952beaffe469b05f545b90344675e1889cb48"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.time.StopWatchTest"
+	]
+}

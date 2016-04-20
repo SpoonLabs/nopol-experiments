@@ -1,0 +1,20 @@
+{
+	"id": "CM2",
+	"commit": {
+		"patch": "0e424881ff2566aa25d470f6eb60d4dd888c1f94",
+		"buggy": "4100eabf75c4e581c5d9d9ab921f5c48aeac56da"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-beanutils-1.6.1.jar",
+		"commons-collections-3.0.jar",
+		"commons-discovery-0.2.jar",
+		"commons-lang-2.0.jar",
+		"commons-logging-1.0.3.jar",
+		"junit-3.8.jar"
+	]
+}

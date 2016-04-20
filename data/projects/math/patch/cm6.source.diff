@@ -1,0 +1,92 @@
+diff --git a/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolver.java b/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolver.java
+index cea586c..644d16a 100644
+--- a/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolver.java
++++ b/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolver.java
+@@ -60,7 +60,9 @@ public interface UnivariateRealSolver extends ConvergingAlgorithm {
+ 
+     /**
+      * Solve for a zero root in the given interval.
+-     * A solver may require that the interval brackets a single zero root.
++     * <p>A solver may require that the interval brackets a single zero root.
++     * Solvers that do require bracketing should be able to handle the case
++     * where one of the endpoints is itself a root.</p>
+      * 
+      * @param min the lower bound for the interval.
+      * @param max the upper bound for the interval.
+@@ -80,7 +82,9 @@ public interface UnivariateRealSolver extends ConvergingAlgorithm {
+ 
+     /**
+      * Solve for a zero root in the given interval.
+-     * A solver may require that the interval brackets a single zero root.
++     * <p>A solver may require that the interval brackets a single zero root.
++     * Solvers that do require bracketing should be able to handle the case
++     * where one of the endpoints is itself a root.</p>
+      * 
+      * @param f the function to solve.
+      * @param min the lower bound for the interval.
+@@ -100,7 +104,9 @@ public interface UnivariateRealSolver extends ConvergingAlgorithm {
+ 
+     /**
+      * Solve for a zero in the given interval, start at startValue.
+-     * A solver may require that the interval brackets a single zero root.
++     * <p>A solver may require that the interval brackets a single zero root.
++     * Solvers that do require bracketing should be able to handle the case
++     * where one of the endpoints is itself a root.</p>
+      * 
+      * @param min the lower bound for the interval.
+      * @param max the upper bound for the interval.
+@@ -121,7 +127,9 @@ public interface UnivariateRealSolver extends ConvergingAlgorithm {
+ 
+     /**
+      * Solve for a zero in the given interval, start at startValue.
+-     * A solver may require that the interval brackets a single zero root.
++     * <p>A solver may require that the interval brackets a single zero root.
++     * Solvers that do require bracketing should be able to handle the case
++     * where one of the endpoints is itself a root.</p>
+      * 
+      * @param f the function to solve.
+      * @param min the lower bound for the interval.
+diff --git a/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java b/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+index 5b76415..e6398f6 100644
+--- a/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
++++ b/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+@@ -131,7 +131,7 @@ public class UnivariateRealSolverUtils {
+      /**
+      * This method attempts to find two values a and b satisfying <ul>
+      * <li> <code> lowerBound <= a < initial < b <= upperBound</code> </li>
+-     * <li> <code> f(a) * f(b) < 0 </code> </li>
++     * <li> <code> f(a) * f(b) <= 0 </code> </li>
+      * </ul>
+      * If f is continuous on <code>[a,b],</code> this means that <code>a</code>
+      * and <code>b</code> bracket a root of f.
+@@ -141,7 +141,7 @@ public class UnivariateRealSolverUtils {
+      * function at <code>a</code> and <code>b</code> and keeps moving
+      * the endpoints out by one unit each time through a loop that terminates 
+      * when one of the following happens: <ul>
+-     * <li> <code> f(a) * f(b) < 0 </code> --  success!</li>
++     * <li> <code> f(a) * f(b) <= 0 </code> --  success!</li>
+      * <li> <code> a = lower </code> and <code> b = upper</code> 
+      * -- ConvergenceException </li>
+      * <li> <code> maximumIterations</code> iterations elapse 
+@@ -195,7 +195,7 @@ public class UnivariateRealSolverUtils {
+         } while ((fa * fb > 0.0) && (numIterations < maximumIterations) && 
+                 ((a > lowerBound) || (b < upperBound)));
+    
+-        if (fa * fb >= 0.0 ) {
++        if (fa * fb > 0.0 ) {
+             throw new ConvergenceException(
+                       "number of iterations={0}, maximum iterations={1}, " +
+                       "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
+diff --git a/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java b/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java
+index 808a573..419fbfa 100644
+--- a/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java
++++ b/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java
+@@ -65,7 +65,7 @@ public abstract class AbstractContinuousDistribution
+         }
+ 
+         // by default, do simple root finding using bracketing and default solver.
+-        // subclasses can overide if there is a better method.
++        // subclasses can override if there is a better method.
+         UnivariateRealFunction rootFindingFunction =
+             new UnivariateRealFunction() {
+             public double value(double x) throws FunctionEvaluationException {

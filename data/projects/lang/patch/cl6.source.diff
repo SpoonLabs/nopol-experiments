@@ -1,0 +1,16 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 27e3f8e..e34d90d 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5209,10 +5209,10 @@ public class StringUtils {
+      * @param cs  the CharSequence to check, may be null
+      * @return <code>true</code> if only contains letters, and is non-null
+      * @since 3.0 Changed signature from isAlpha(String) to isAlpha(CharSequence)
+      * @since 3.0 Changed "" to return false and not true
+      */
+     public static boolean isAlpha(CharSequence cs) {
+-        if (cs == null) {
++        if (cs == null || cs.length() == 0) {
+             return false;
+         }
+         int sz = cs.length();

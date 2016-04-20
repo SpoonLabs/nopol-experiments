@@ -1,0 +1,18 @@
+diff --git a/src/test/java/org/apache/commons/math/random/RandomDataTest.java b/src/test/java/org/apache/commons/math/random/RandomDataTest.java
+index cb6d078..46d34a2 100644
+--- a/src/test/java/org/apache/commons/math/random/RandomDataTest.java
++++ b/src/test/java/org/apache/commons/math/random/RandomDataTest.java
+@@ -563,7 +563,12 @@ public class RandomDataTest extends RetryTestCase {
+ 		} catch (IllegalArgumentException ex) {
+ 			// ignored
+ 		}
+-		assertEquals("0 mean", 0, randomData.nextExponential(0), 10E-8);
++        try {
++            randomData.nextExponential(0);
++            fail("zero mean -- expecting IllegalArgumentException");
++        } catch (IllegalArgumentException ex) {
++            // ignored
++        }
+ 		long cumFreq = 0;
+ 		double v = 0;
+ 		for (int i = 0; i < largeSampleSize; i++) {

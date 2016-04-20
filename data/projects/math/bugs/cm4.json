@@ -1,0 +1,17 @@
+{
+	"id": "CM4",
+	"commit": {
+		"patch": "ee310159d9742bed3c1064e17a1eafd0441be374",
+		"buggy": "5fc7e64e552154df09c8f12bbfb4e05a88be390a"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-discovery-0.4.jar",
+		"commons-logging-1.0.3.jar",
+		"junit-3.8.jar"
+	]
+}

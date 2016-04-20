@@ -1,0 +1,23 @@
+{
+	"id": "CM6",
+	"commit": {
+		"patch": "ea0ea8267309e94a8f2393829cbf1c1669abf5c9",
+		"buggy": "26281773d85fa96594c16aee56e36805f3254064"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.5"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-beanutils-1.7.0.jar",
+		"commons-collections-3.0.jar",
+		"commons-discovery-0.4.jar",
+		"commons-lang-2.1.jar",
+		"commons-logging-1.1.1.jar",
+		"junit-4.10.jar"
+	]
+}

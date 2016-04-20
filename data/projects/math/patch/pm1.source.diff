@@ -1,0 +1,147 @@
+diff --git a/src/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java b/src/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java
+index a1526d7..bed7f06 100644
+--- a/src/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java
++++ b/src/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java
+@@ -120,7 +120,7 @@ public class SummaryStatistics implements StatisticalSummary, Serializable {
+     protected SumOfLogs sumLog = new SumOfLogs();
+ 
+     /** geoMean of values that have been added */
+-    protected GeometricMean geoMean = new GeometricMean();
++    protected GeometricMean geoMean = new GeometricMean(sumLog);
+ 
+     /** mean of values that have been added */
+     protected Mean mean = new Mean();
+@@ -174,16 +174,18 @@ public class SummaryStatistics implements StatisticalSummary, Serializable {
+         minImpl.increment(value);
+         maxImpl.increment(value);
+         sumLogImpl.increment(value);
+-        geoMean.increment(value);
+         secondMoment.increment(value);
+-        // If mean or variance have been overridden,
+-        // need to increment these, since they don't have secondMoment
++        // If mean, variance or geomean have been overridden,
++        // need to increment these
+         if (!(meanImpl instanceof Mean)) {
+                 meanImpl.increment(value);
+         }
+         if (!(varianceImpl instanceof Variance)) {
+             varianceImpl.increment(value);
+         }
++        if (!(geoMeanImpl instanceof GeometricMean)) {
++            geoMeanImpl.increment(value);
++        }
+         n++;
+     }
+ 
+@@ -297,6 +299,17 @@ public class SummaryStatistics implements StatisticalSummary, Serializable {
+     }
+     
+     /**
++     * Returns the sum of the logs of the values that have been added.
++     * <p>
++     *  Double.NaN is returned if no values have been added.</p>
++     *
++     * @return the sum of logs  
++     */
++    public double getSumOfLogs() {
++        return sumLogImpl.getResult();
++    }
++    
++    /**
+      * Generates a text report displaying
+      * summary statistics from values that
+      * have been added.
+@@ -313,6 +326,7 @@ public class SummaryStatistics implements StatisticalSummary, Serializable {
+         outBuffer.append("variance: " + getVariance() + "\n");
+         outBuffer.append("sum of squares: " + getSumsq() + "\n");
+         outBuffer.append("standard deviation: " + getStandardDeviation() + "\n");
++        outBuffer.append("sum of logs: " + getSumOfLogs() + "\n");
+         return outBuffer.toString();
+     }
+ 
+@@ -505,6 +519,7 @@ public class SummaryStatistics implements StatisticalSummary, Serializable {
+             StorelessUnivariateStatistic sumLogImpl) {
+         checkEmpty();
+         this.sumLogImpl = sumLogImpl;
++        geoMean.setSumLogImpl(sumLogImpl);
+     }
+ 
+     /**
+diff --git a/src/java/org/apache/commons/math/stat/descriptive/moment/GeometricMean.java b/src/java/org/apache/commons/math/stat/descriptive/moment/GeometricMean.java
+index 18d5359..a521965 100644
+--- a/src/java/org/apache/commons/math/stat/descriptive/moment/GeometricMean.java
++++ b/src/java/org/apache/commons/math/stat/descriptive/moment/GeometricMean.java
+@@ -17,6 +17,7 @@
+ package org.apache.commons.math.stat.descriptive.moment;
+ 
+ import org.apache.commons.math.stat.descriptive.AbstractStorelessUnivariateStatistic;
++import org.apache.commons.math.stat.descriptive.StorelessUnivariateStatistic;
+ import org.apache.commons.math.stat.descriptive.summary.SumOfLogs;
+ 
+ /**
+@@ -49,7 +50,7 @@ public class GeometricMean extends AbstractStorelessUnivariateStatistic {
+     private static final long serialVersionUID = -8178734905303459453L;  
+     
+     /** Wrapped SumOfLogs instance */
+-    private SumOfLogs sumOfLogs;
++    private StorelessUnivariateStatistic sumOfLogs;
+ 
+     /**
+      * Create a GeometricMean instance
+@@ -59,6 +60,13 @@ public class GeometricMean extends AbstractStorelessUnivariateStatistic {
+     }
+     
+     /**
++     * Create a GeometricMean instance using the given SumOfLogs instance
++     */
++    public GeometricMean(SumOfLogs sumOfLogs) {
++        this.sumOfLogs = sumOfLogs;
++    }
++    
++    /**
+      * @see org.apache.commons.math.stat.descriptive.StorelessUnivariateStatistic#increment(double)
+      */
+     public void increment(final double d) {
+@@ -111,5 +119,41 @@ public class GeometricMean extends AbstractStorelessUnivariateStatistic {
+     public long getN() {
+         return sumOfLogs.getN();
+     }
++    
++    /**
++     * <p>Sets the implementation for the sum of logs.</p>
++     * <p>This method must be activated before any data has been added - i.e.,
++     * before {@link #addValue(double) addValue} has been used to add data; 
++     * otherwise an IllegalStateException will be thrown.</p>
++     * 
++     * @param sumLogImpl the StorelessUnivariateStatistic instance to use
++     * for computing the log sum
++     * @throws IllegalStateException if data has already been added 
++     *  (i.e if n > 0)
++     */
++    public void setSumLogImpl(
++            StorelessUnivariateStatistic sumLogImpl) {
++        checkEmpty();
++        this.sumOfLogs = sumLogImpl;
++    }
++    
++    /**
++     * Returns the currently configured sum of logs implementation
++     * 
++     * @return the StorelessUnivariateStatistic implementing the log sum
++     */
++    public StorelessUnivariateStatistic getSumLogImpl() {
++        return sumOfLogs;
++    }
++    
++    /**
++     * Throws IllegalStateException if n > 0.
++     */
++    private void checkEmpty() {
++        if (getN() > 0) {
++            throw new IllegalStateException(
++                "Implementation must be configured before values are added.");
++        }
++    }
+ 
+ }
+\ No newline at end of file

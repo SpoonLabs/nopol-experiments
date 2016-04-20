@@ -1,0 +1,22 @@
+{
+	"id": "PL3",
+	"commit": {
+		"patch": "874438dfc12f54b3e1d1be7598bbf1d069a44801",
+		"buggy": "23a71e792bf4ff7263d196047c2f378e888ce04f"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"java": {
+		"version": "1.8"
+	},
+	"type": "condition",
+	"dependencies": [
+		"easymock-2.5.2.jar",
+		"junit-4.10.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest"
+	]
+}

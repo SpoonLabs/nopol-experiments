@@ -1,0 +1,21 @@
+{
+	"id": "CL2",
+	"commit": {
+		"patch": "80da42a808874e691f70654446477421edf53e46",
+		"buggy": "feac7d3bc7a3246bfa110fba17d1bf8830a629e5"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.StringUtilsTest"
+	]
+}

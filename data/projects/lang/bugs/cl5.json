@@ -1,0 +1,18 @@
+{
+	"id": "CL5",
+	"commit": {
+		"patch": "2dc56182579703153e5c9886b3ecd22bbc348b49",
+		"buggy": "bb8709f3e30e7c13530dfef458a4c370783de2be"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.6"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"id": "CM9",
+	"commit": {
+		"patch": "6844aba987aaf32c85a4eb3fba3f6ccf9d7c8db6",
+		"buggy": "4673043763616457113c70219e1950818ced847b"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-beanutils-1.7.0.jar",
+		"commons-collections-2.0.jar",
+		"commons-discovery-0.4.jar",
+		"commons-lang-2.1.jar",
+		"commons-logging-1.1.1.jar",
+		"junit-4.10.jar"
+	]
+}

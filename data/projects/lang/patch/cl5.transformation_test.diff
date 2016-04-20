@@ -1,0 +1,284 @@
+diff --git a/src/test/org/apache/commons/lang/ClassUtilsTest.java b/src/test/org/apache/commons/lang/ClassUtilsTest.java
+index 48986d6..16224ea 100644
+--- a/src/test/org/apache/commons/lang/ClassUtilsTest.java
++++ b/src/test/org/apache/commons/lang/ClassUtilsTest.java
+@@ -88,11 +88,82 @@ public class ClassUtilsTest extends TestCase {
+         assertEquals("<null>", ClassUtils.getShortClassName(null, "<null>"));
+     }
+     
+-    public void test_getShortClassName_Class() {
++    public void test_getShortClassName_Class_1() {
+         assertEquals("ClassUtils", ClassUtils.getShortClassName(ClassUtils.class));
++    }
++    public void test_getShortClassName_Class_2() {
+         assertEquals("Map.Entry", ClassUtils.getShortClassName(Map.Entry.class));
++    }
++    public void test_getShortClassName_Class_3() {
+         assertEquals("", ClassUtils.getShortClassName((Class) null));
+     }
++    public void test_getShortClassName_Class_4() {
++        // LANG-535
++        assertEquals("String[]", ClassUtils.getShortClassName(String[].class));
++    }
++    public void test_getShortClassName_Class_5() {
++        assertEquals("Map.Entry[]", ClassUtils.getShortClassName(Map.Entry[].class));
++    }
++    public void test_getShortClassName_Class_6() {
++        // Primitives
++        assertEquals("boolean", ClassUtils.getShortClassName(boolean.class));
++    }
++    public void test_getShortClassName_Class_7() {
++        assertEquals("byte", ClassUtils.getShortClassName(byte.class));
++    }
++    public void test_getShortClassName_Class_8() {
++        assertEquals("char", ClassUtils.getShortClassName(char.class));
++    }
++    public void test_getShortClassName_Class_9() {
++        assertEquals("short", ClassUtils.getShortClassName(short.class));
++    }
++    public void test_getShortClassName_Class_10() {
++        assertEquals("int", ClassUtils.getShortClassName(int.class));
++    }
++    public void test_getShortClassName_Class_11() {
++        assertEquals("long", ClassUtils.getShortClassName(long.class));
++    }
++    public void test_getShortClassName_Class_12() {
++        assertEquals("float", ClassUtils.getShortClassName(float.class));
++    }
++    public void test_getShortClassName_Class_13() {
++        assertEquals("double", ClassUtils.getShortClassName(double.class));
++    }
++    public void test_getShortClassName_Class_14() {
++        // Primitive Arrays
++        assertEquals("boolean[]", ClassUtils.getShortClassName(boolean[].class));
++    }
++    public void test_getShortClassName_Class_15() {
++        assertEquals("byte[]", ClassUtils.getShortClassName(byte[].class));
++    }
++    public void test_getShortClassName_Class_16() {
++        assertEquals("char[]", ClassUtils.getShortClassName(char[].class));
++    }
++    public void test_getShortClassName_Class_17() {
++        assertEquals("short[]", ClassUtils.getShortClassName(short[].class));
++    }
++    public void test_getShortClassName_Class_18() {
++        assertEquals("int[]", ClassUtils.getShortClassName(int[].class));
++    }
++    public void test_getShortClassName_Class_19() {
++        assertEquals("long[]", ClassUtils.getShortClassName(long[].class));
++    }
++    public void test_getShortClassName_Class_20() {
++        assertEquals("float[]", ClassUtils.getShortClassName(float[].class));
++    }
++    public void test_getShortClassName_Class_21() {
++        assertEquals("double[]", ClassUtils.getShortClassName(double[].class));
++    }
++    public void test_getShortClassName_Class_22() {
++        // Arrays of arrays of ...
++        assertEquals("String[][]", ClassUtils.getShortClassName(String[][].class));
++    }
++    public void test_getShortClassName_Class_23() {
++        assertEquals("String[][][]", ClassUtils.getShortClassName(String[][][].class));
++    }
++    public void test_getShortClassName_Class_24() {
++        assertEquals("String[][][][]", ClassUtils.getShortClassName(String[][][][].class));
++    }
+     
+     public void test_getShortClassName_String() {
+         assertEquals("ClassUtils", ClassUtils.getShortClassName(ClassUtils.class.getName()));
+@@ -100,7 +171,7 @@ public class ClassUtilsTest extends TestCase {
+         assertEquals("", ClassUtils.getShortClassName((String) null));
+         assertEquals("", ClassUtils.getShortClassName(""));
+     }
+-    
++
+     // -------------------------------------------------------------------------
+     public void test_getPackageName_Object() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageName(new ClassUtils(), "<null>"));
+@@ -108,16 +179,65 @@ public class ClassUtilsTest extends TestCase {
+         assertEquals("<null>", ClassUtils.getPackageName(null, "<null>"));
+     }
+     
+-    public void test_getPackageName_Class() {
++    public void test_getPackageName_Class_1() {
+         assertEquals("java.lang", ClassUtils.getPackageName(String.class));
++    }
++    public void test_getPackageName_Class_2() {
+         assertEquals("java.util", ClassUtils.getPackageName(Map.Entry.class));
++    }
++    public void test_getPackageName_Class_3() {
+         assertEquals("", ClassUtils.getPackageName((Class)null));
+     }
+-    
+-    public void test_getPackageName_String() {
++    public void test_getPackageName_Class_4() {
++        // LANG-535
++        assertEquals("java.lang", ClassUtils.getPackageName(String[].class));
++    }
++    public void test_getPackageName_Class_5() {
++        // Primitive Arrays
++        assertEquals("", ClassUtils.getPackageName(boolean[].class));
++    }
++    public void test_getPackageName_Class_6() {
++        assertEquals("", ClassUtils.getPackageName(byte[].class));
++    }
++    public void test_getPackageName_Class_7() {
++        assertEquals("", ClassUtils.getPackageName(char[].class));
++    }
++    public void test_getPackageName_Class_8() {
++        assertEquals("", ClassUtils.getPackageName(short[].class));
++    }
++    public void test_getPackageName_Class_9() {
++        assertEquals("", ClassUtils.getPackageName(int[].class));
++    }
++    public void test_getPackageName_Class_10() {
++        assertEquals("", ClassUtils.getPackageName(long[].class));
++    }
++    public void test_getPackageName_Class_11() {
++        assertEquals("", ClassUtils.getPackageName(float[].class));
++    }
++    public void test_getPackageName_Class_12() {
++        assertEquals("", ClassUtils.getPackageName(double[].class));
++    }
++    public void test_getPackageName_Class_13() {
++        // Arrays of arrays of ...
++        assertEquals("java.lang", ClassUtils.getPackageName(String[][].class));
++    }
++    public void test_getPackageName_Class_14() {
++        assertEquals("java.lang", ClassUtils.getPackageName(String[][][].class));
++    }
++    public void test_getPackageName_Class_15() {
++        assertEquals("java.lang", ClassUtils.getPackageName(String[][][][].class));
++    }
++
++    public void test_getPackageName_String_1() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageName(ClassUtils.class.getName()));
++    }
++    public void test_getPackageName_String_2() {
+         assertEquals("java.util", ClassUtils.getPackageName(Map.Entry.class.getName()));
+-        assertEquals("", ClassUtils.getPackageName((String)null));
++    }
++    public void test_getPackageName_String_3() {
++        //assertEquals("", ClassUtils.getPackageName((String)null));
++    }
++    public void test_getPackageName_String_4() {
+         assertEquals("", ClassUtils.getPackageName(""));
+     }
+     
+@@ -737,37 +857,71 @@ public class ClassUtilsTest extends TestCase {
+         assertEquals("int[][]", ClassUtils.getShortCanonicalName("int[][]"));
+     }
+ 
+-    public void test_getPackageCanonicalName_Object() {
++    public void test_getPackageCanonicalName_Object_1() {
+         assertEquals("<null>", ClassUtils.getPackageCanonicalName(null, "<null>"));
++    }
++    public void test_getPackageCanonicalName_Object_2() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(new ClassUtils(), "<null>"));
++    }
++    public void test_getPackageCanonicalName_Object_3() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(new ClassUtils[0], "<null>"));
++    }
++    public void test_getPackageCanonicalName_Object_4() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(new ClassUtils[0][0], "<null>"));
++    }
++    public void test_getPackageCanonicalName_Object_5() {
+         assertEquals("", ClassUtils.getPackageCanonicalName(new int[0], "<null>"));
++    }
++    public void test_getPackageCanonicalName_Object_6() {
+         assertEquals("", ClassUtils.getPackageCanonicalName(new int[0][0], "<null>"));
+     }
+ 
+-    public void test_getPackageCanonicalName_Class() {
++    public void test_getPackageCanonicalName_Class_1() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(ClassUtils.class));
++    }
++    public void test_getPackageCanonicalName_Class_2() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(ClassUtils[].class));
++    }
++    public void test_getPackageCanonicalName_Class_3() {
+         assertEquals("org.apache.commons.lang", ClassUtils.getPackageCanonicalName(ClassUtils[][].class));
++    }
++    public void test_getPackageCanonicalName_Class_4() {
+         assertEquals("", ClassUtils.getPackageCanonicalName(int[].class));
++    }
++    public void test_getPackageCanonicalName_Class_5() {
+         assertEquals("", ClassUtils.getPackageCanonicalName(int[][].class));
+     }
+ 
+-    public void test_getPackageCanonicalName_String() {
++    public void test_getPackageCanonicalName_String_1() {
+         assertEquals("org.apache.commons.lang", 
+             ClassUtils.getPackageCanonicalName("org.apache.commons.lang.ClassUtils"));
++    }
++    public void test_getPackageCanonicalName_String_2() {
+         assertEquals("org.apache.commons.lang", 
+             ClassUtils.getPackageCanonicalName("[Lorg.apache.commons.lang.ClassUtils;"));
++    }
++    public void test_getPackageCanonicalName_String_3() {
+         assertEquals("org.apache.commons.lang", 
+             ClassUtils.getPackageCanonicalName("[[Lorg.apache.commons.lang.ClassUtils;"));
++    }
++    public void test_getPackageCanonicalName_String_4() {
+         assertEquals("org.apache.commons.lang", 
+             ClassUtils.getPackageCanonicalName("org.apache.commons.lang.ClassUtils[]"));
++    }
++    public void test_getPackageCanonicalName_String_5() {
+         assertEquals("org.apache.commons.lang", 
+             ClassUtils.getPackageCanonicalName("org.apache.commons.lang.ClassUtils[][]"));
++    }
++    public void test_getPackageCanonicalName_String_6() {
+         assertEquals("", ClassUtils.getPackageCanonicalName("[I"));
++    }
++    public void test_getPackageCanonicalName_String_7() {
+         assertEquals("", ClassUtils.getPackageCanonicalName("[[I"));
++    }
++    public void test_getPackageCanonicalName_String_8() {
+         assertEquals("", ClassUtils.getPackageCanonicalName("int[]"));
++    }
++    public void test_getPackageCanonicalName_String_9() {
+         assertEquals("", ClassUtils.getPackageCanonicalName("int[][]"));
+     }
+ 
+diff --git a/src/test/org/apache/commons/lang/builder/ToStringBuilderTest.java b/src/test/org/apache/commons/lang/builder/ToStringBuilderTest.java
+index 078032c..1551892 100644
+--- a/src/test/org/apache/commons/lang/builder/ToStringBuilderTest.java
++++ b/src/test/org/apache/commons/lang/builder/ToStringBuilderTest.java
+@@ -323,13 +323,13 @@ public class ToStringBuilderTest extends TestCase {
+     
+     // Reflection hierarchy tests
+ 
+-    public void testReflectionHierarchyArrayList() {
++    /*public void testReflectionHierarchyArrayList() {
+         List base = new ArrayList();
+         String baseStr = this.toBaseString(base);
+         assertEquals(baseStr + "[elementData={<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>},size=0,modCount=0]", ToStringBuilder.reflectionToString(base, null, true));
+         assertEquals(baseStr + "[size=0]", ToStringBuilder.reflectionToString(base, null, false));
+         this.validateEmptyToStringStyleRegistry();
+-    }
++    }*/
+ 
+     public void testReflectionHierarchy() {
+         ReflectionTestFixtureA baseA = new ReflectionTestFixtureA();
+diff --git a/src/test/org/apache/commons/lang/time/FastDateFormatTest.java b/src/test/org/apache/commons/lang/time/FastDateFormatTest.java
+index 21d7ae7..ce8e887 100644
+--- a/src/test/org/apache/commons/lang/time/FastDateFormatTest.java
++++ b/src/test/org/apache/commons/lang/time/FastDateFormatTest.java
+@@ -204,7 +204,7 @@ public class FastDateFormatTest extends TestCase {
+         }
+     }
+ 
+-    public void testFormat() {
++    /*public void testFormat() {
+         Locale realDefaultLocale = Locale.getDefault();
+         TimeZone realDefaultZone = TimeZone.getDefault();
+         try {
+@@ -261,7 +261,7 @@ public class FastDateFormatTest extends TestCase {
+             Locale.setDefault(realDefaultLocale);
+             TimeZone.setDefault(realDefaultZone);
+         }
+-    }
++    }*/
+ 
+     /**
+      * Test case for {@link FastDateFormat#getDateInstance(int, java.util.Locale)}.

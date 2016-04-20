@@ -1,0 +1,21 @@
+{
+	"id": "PL2",
+	"commit": {
+		"patch": "dd0deed066e728d7b09e5fd69855c5ad7bf6bdb4",
+		"buggy": "65b5dc69db3bfd08b4392dcee16fa0542b097812"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.StringEscapeUtilsTest"
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"id": "CM8",
+	"commit": {
+		"patch": "d7c0f27e9fac104f613dcb672c243d3dc7eaf655",
+		"buggy": "63a48705a496bf2506121dcddbd8cac2a78f877c"
+	},
+	"path": {
+		"source": "src/main/java/",
+		"test": "src/test/java/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-4.10.jar"
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"id": "PL3",
+	"commit": {
+		"patch": "4342bd5d69d122a16c735416039b4b2ca27897ad",
+		"buggy": "04f767b393b5849185f4ddf8f7ae8fc0b255e9bf"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.WordUtilsTest"
+	]
+}

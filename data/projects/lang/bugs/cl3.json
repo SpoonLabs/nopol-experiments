@@ -1,0 +1,21 @@
+{
+	"id": "CL3",
+	"commit": {
+		"patch": "9a51cf5efc8b2b345a02f4d18e5800ca498d82cd",
+		"buggy": "f085c587447f2f9b939b153fc0b1455a4d16f261"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.StringUtilsSubstringTest"
+	]
+}

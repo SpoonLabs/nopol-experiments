@@ -1,0 +1,17 @@
+{
+	"id": "CM3",
+	"commit": {
+		"patch": "20eb63732cc9254f8df7be5930ac9d85007804f1",
+		"buggy": "73aa4c97d1d5e4782e0740a0f7daf453c9108c93"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"type": "condition",
+	"dependencies": [
+		"commons-discovery-0.2.jar",
+		"commons-logging-1.0.3.jar",
+		"junit-3.8.jar"
+	]
+}

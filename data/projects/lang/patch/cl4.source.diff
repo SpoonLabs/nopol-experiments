@@ -1,0 +1,16 @@
+diff --git a/src/java/org/apache/commons/lang/text/StrBuilder.java b/src/java/org/apache/commons/lang/text/StrBuilder.java
+index fba251c..13e8a6b 100644
+--- a/src/java/org/apache/commons/lang/text/StrBuilder.java
++++ b/src/java/org/apache/commons/lang/text/StrBuilder.java
+@@ -1456,10 +1456,10 @@ public class StrBuilder implements Cloneable {
+      */
+     public int indexOf(String str, int startIndex) {
+         startIndex = (startIndex < 0 ? 0 : startIndex);
+-        if (startIndex >= size) {
++        if (str == null || startIndex >= size) {
+             return -1;
+         }
+         int strLen = str.length();
+         if (strLen > 0 && strLen <= size) {
+             if (strLen == 1) {
+                 return indexOf(str.charAt(0), startIndex);

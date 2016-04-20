@@ -1,0 +1,21 @@
+{
+	"id": "CL4",
+	"commit": {
+		"patch": "2f6b0b2c69b626d6a669aa8add3223417b3b274e",
+		"buggy": "d7210650ff041a58076280e4ea680305c81671bf"
+	},
+	"path": {
+		"source": "src/java/",
+		"test": "src/test/"
+	},
+	"java": {
+		"version": "1.4"
+	},
+	"type": "condition",
+	"dependencies": [
+		"junit-3.8.jar"
+	],
+	"tests": [
+		"org.apache.commons.lang.text.StrBuilderTest"
+	]
+}
