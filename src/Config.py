@@ -1,5 +1,4 @@
 import os
-from os.path import expanduser
 
 
 class Config(object):
@@ -13,6 +12,7 @@ class Config(object):
         self.pathProjectData = os.path.join(self.pathData, "projects")
         self.resultsFolder = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "results")
+        self.silence = False
 
 
 conf = Config()

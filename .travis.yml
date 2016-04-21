@@ -12,5 +12,5 @@ script:
 - cd build; make
 - cd ../..
 - cp z3/build/z3 data/lib/z3
-- python src/reproduce.py -bug all
+- python src/reproduce.py -bug all --silence
 

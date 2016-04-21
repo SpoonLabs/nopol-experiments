@@ -31,9 +31,9 @@ def execute(bug, solverPath):
     if os.path.isdir(os.path.join(pathBug, "target")):
         shutil.rmtree(os.path.join(pathBug, "target"))
     # compile the bug
-    print("Compile the bug %s" % bug.id)
+    print colored("Compiling the bug %s" % bug.id, [bcolors.BOLD])
     bug.compile(conf.pathDataset)
-    print("Start repair")
+    print colored("Repairing the bug %s" % bug.id, [bcolors.BOLD])
     tests = ""
     if 'tests' in bug.data:
         for test in bug.data['tests']:
@@ -71,8 +71,13 @@ java -Xms128m -Xmx1024m -jar %s nopol %s %s z3 %s %s
                 colored(m.group(6), [bcolors.OKBLUE]),
                 colored(m.group(7), [bcolors.UNDERLINE]),
                 m.group(8))
-        sys.stdout.write(nextline)
-        sys.stdout.flush()
+        if not conf.silence:
+            sys.stdout.write(nextline)
+            sys.stdout.flush()
+    if patch != "":
+        print colored("%s: %s" % (bug.id, patch), [bcolors.OKGREEN, bcolors.BOLD])
+    else:
+        print colored("No patch for %s" % (bug.id), [bcolors.FAIL, bcolors.BOLD])
     return patch
 
 
@@ -91,12 +96,14 @@ def getArgs():
     parser.add_argument('-bug', help='The bug to execute')
     parser.add_argument('-solver', default=os.path.join(conf.pathLib, "z3"),
                         help='The path to the z3 solver')
+    parser.add_argument('--silence', default=False, action='store_true', help='Silence execution')
     return parser.parse_args()
 
 
 if __name__ == '__main__':
     args = getArgs()
     patches = {}
+    conf.silence = args.silence
     if args.bug.lower() == "all":
         for bug in ["cm1", "cm2", "cm3", "cm4", "cm5", "cm6", "cm7", "cm10",
                     "cl1", "cl2", "cl3", "cl4", "cl5", "pm1", "pm2", "pl1",
