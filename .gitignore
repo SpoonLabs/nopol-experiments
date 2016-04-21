@@ -1,5 +1,7 @@
 *.log
 *.z3
+spooned/
+
 # Created by https://www.gitignore.io/api/java
 
 ### Java ###
