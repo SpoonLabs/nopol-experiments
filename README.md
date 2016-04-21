@@ -1,7 +1,9 @@
 # Nopol Dataset
 
-This data set is a supplemental material of our project NOPOL.  
+This data set is a supplemental material of our project NOPOL.
+
 Nopol in GitHub, https://github.com/SpoonLabs/nopol/
+
 Nopol paper, http://hal.archives-ouvertes.fr/hal-01285008/
 
 The latest version of Nopol as well as its usage can be found in https://github.com/SpoonLabs/nopol/ 
@@ -12,10 +14,10 @@ To run Nopol, Z3 SMT solver is a must.
 We recommend Z3 4.3.2, http://github.com/Z3Prover/z3/releases/tag/z3-4.3.2 
 Note that changing to another version may lead to different patches from the ones in our paper. 
 
-```
+```bash
 git clone https://github.com/SpoonLabs/nopol-experiments.git
 cd nopol-experiments
-python src/reproduce.py [-solver >path_to_z3>] -bug [bug_id|all]
+python src/reproduce.py [-solver <path_to_z3>] -bug [bug_id|all]
 ```
 
 ## Nopol version in our paper
@@ -29,7 +31,7 @@ We recommend Z3 4.3.2, http://github.com/Z3Prover/z3/releases/tag/z3-4.3.2
 Note that changing to another version may lead to different patches from the ones in our paper. 
 
 The following command will show the usage of Nopol. 
-java -jar nopol-0.0.3-SNAPSHOT-jar-with-dependencies.jar 
+```java -jar nopol-0.0.3-SNAPSHOT-jar-with-dependencies.jar``` 
  
 ## Test cases in use for Nopol
 
