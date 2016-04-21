@@ -28,7 +28,8 @@ def colored(text, colors):
 
 def execute(bug, solverPath):
     pathBug = os.path.join(conf.pathDataset, bug.id)
-    shutil.rmtree(os.path.join(pathBug, "target"))
+    if os.path.isdir(os.path.join(pathBug, "target")):
+        shutil.rmtree(os.path.join(pathBug, "target"))
     # compile the bug
     print("Compile the bug %s" % bug.id)
     bug.compile(conf.pathDataset)
@@ -109,5 +110,5 @@ if __name__ == '__main__':
             patches[args.bug] = patch
 
     print("\n\n%d patches found" % len(patches))
-    for bug in patches:
+    for bug in sorted(patches):
         print colored("%s: %s" % (bug, patches[bug]), [bcolors.OKGREEN, bcolors.BOLD])
