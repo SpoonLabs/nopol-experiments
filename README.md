@@ -10,8 +10,8 @@ Nopol paper, <http://hal.archives-ouvertes.fr/hal-01285008/>
 
 To run Nopol, you need Java and JavaC version 7 and the Z3 SMT solver.
 We use java version "1.7.0_79".
-We use Z3 4.3.2, http://github.com/Z3Prover/z3/releases/tag/z3-4.3.2 
-Note that changing to another version may lead to different patches from the ones in our paper. 
+We use Z3 4.3.3, http://github.com/Z3Prover/z3/releases/tag/z3-4.3.3
+Note that changing to another Java or Z3 version may lead to different patches from the ones in our paper. 
 
 ```bash
 git clone https://github.com/SpoonLabs/nopol-experiments.git
