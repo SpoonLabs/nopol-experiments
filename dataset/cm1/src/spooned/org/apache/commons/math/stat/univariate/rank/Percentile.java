@@ -81,7 +81,7 @@ public double evaluate(final double[] values, final int begin, final int length,
         if (pos < 1) {
             return sorted[0];
         } 
-        if ((sorted.length)<=(fpos)) {
+        if ((length)<=(fpos)) {
             return sorted[(length - 1)];
         } 
         double lower = sorted[(intPos - 1)];
