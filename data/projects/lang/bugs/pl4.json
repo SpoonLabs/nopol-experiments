@@ -9,7 +9,7 @@
 		"test": "src/test/java/"
 	},
 	"java": {
-		"version": "1.8"
+		"version": "1.7"
 	},
 	"type": "condition",
 	"dependencies": [

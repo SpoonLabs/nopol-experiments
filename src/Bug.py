@@ -148,7 +148,7 @@ mkdir target
 mkdir target/classes
 mkdir target/test-classes
 %s
-javac -source %s -d target/classes -g -encoding  iso-8859-1  -classpath %s %s""" % (
+javac -source %s -d target/classes -g -encoding cp1252 -classpath %s %s""" % (
         os.path.join(datasetPath, self.id), cmdRessources, javaVersion,
         classpath, sourceFiles)
         response = subprocess.call(cmd, shell=True)
@@ -156,6 +156,6 @@ javac -source %s -d target/classes -g -encoding  iso-8859-1  -classpath %s %s"""
             print "Compilation error: %s" % self.id
             return
         cmd = """cd %s
-javac -source %s -d target/test-classes -g -encoding  iso-8859-1 -classpath %s %s""" % (
+javac -source %s -d target/test-classes -g -encoding cp1252 -classpath %s %s""" % (
         os.path.join(datasetPath, self.id), javaVersion, classpath, testFiles)
         subprocess.call(cmd, shell=True)
