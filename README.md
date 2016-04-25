@@ -42,6 +42,23 @@ By default, z3 is taken at `./data/lib/z3` (version 4.3.3, 64 bits). If you'd li
 python src/reproduce.py [-solver <path_to_z3>] -bug [bug_id|all]
 ```
 
+## Reproducing the experiment on Travis:
+
+1. Fork this project by clicking on fork on Github
+
+2. Activate travis for your fork (log in to travis-ci.org >> accounts > sync account > on)
+
+3. Get a local version of your fork, `git clone https://github.com/<username>/nopol-experiments`
+
+4. Do an empty commit
+
+```
+cd nopol-experiments
+git commit --allow-empty -m "Trigger"
+git push
+```
+5. visit the travis page to see the results `https://travis-ci.org/<username>/nopol-experiments` (e.g. `https://travis-ci.org/monperrus/nopol-experiments)
+
 ## Nopol version in our paper
 
 The Nopol version in our paper is as follows. 
