@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+  <commitFile file="StringUtils.java" id="0240f23618003cd1cbff61aee891d2b950605b6f">
+    <message>Moving indexOf(String, int) and indexOf(String, int, int) over to CharSequence. LANG-687. This, plus the same happening for the String, String, int variant will open up a lot of methods.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1082062 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0240f23618003cd1cbff61aee891d2b950605b6f</link>
+    <actions>
+      <action>
+        <pre>isEmpty(str)</pre>
+        <post>isEmpty(seq)</post>
+      </action>
+      <action>
+        <pre>isEmpty(str)</pre>
+        <post>isEmpty(seq)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrSubstitutor.java" id="3bd989dd32c038da2d5fa44c363cd4c695b6eeac">
+    <message>Eat own dog food: use StringUtils.isEmpty().  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1527373 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3bd989dd32c038da2d5fa44c363cd4c695b6eeac</link>
+    <actions>
+      <action>
+        <pre>valueDelimiter == null || valueDelimiter.length() == 0</pre>
+        <post>StringUtils.isEmpty(valueDelimiter)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="RandomStringUtils.java" id="c9d786a4fe2639581047d878a64bab6fb24f1ab3">
+    <message>LANG-805 RandomStringUtils.random(count, 0, 0, false, false, universe, random) always throws java.lang.ArrayIndexOutOfBoundsException  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1348422 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c9d786a4fe2639581047d878a64bab6fb24f1ab3</link>
+    <actions>
+      <action>
+        <pre>start == 0 &amp;&amp; end == 0</pre>
+        <post>!letters &amp;&amp; !numbers</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="IntRange.java" id="bec23232bc5841772e72f7f30893fef9449ffce3">
+    <message>Applying Boris' patch in LANG-481 to improve thread safety in the Range classes. The previous code's reuse of the hashCode variable for local operations means it is utterly non-thread-safe. Now uses a local variable so that the worst case should be the hashCode being calculated multiple times, but not ending up with different values.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@812236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bec23232bc5841772e72f7f30893fef9449ffce3</link>
+    <actions>
+      <action>
+        <pre>hashCode == 0</pre>
+        <post>temp == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Enum.java" id="ec8a8a5ca3353cd89b759d8ab45f621d0a2a2bb7">
+    <message> PR: http://issues.apache.org/bugzilla/show_bug.cgi?id=26876 [lang] Enum.equals does not handle different class loaders.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137776 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ec8a8a5ca3353cd89b759d8ab45f621d0a2a2bb7</link>
+    <actions>
+      <action>
+        <pre>other.getClass() == this.getClass()</pre>
+        <post>other == null</post>
+      </action>
+      <action>
+        <pre>((Enum)other).getEnumClass().getName().equals(getEnumClass().getName())</pre>
+        <post>other.getClass() == this.getClass()</post>
+      </action>
+      <action>
+        <pre>other == null</pre>
+        <post>other == this</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="d9bbb21458555d6ac90667382bbbe9f20338c6d2">
+    <message>Using StringUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137806 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d9bbb21458555d6ac90667382bbbe9f20338c6d2</link>
+    <actions>
+      <action>
+        <pre>string == null || string.length() == 0</pre>
+        <post>StringUtils.isEmpty(string)</post>
+      </action>
+      <action>
+        <pre>string == null || string.length() == 0</pre>
+        <post>StringUtils.isEmpty(string)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="07e3d91d8caf2b06b6782ea25d80b57e51338e8d">
+    <message>Resolving LANG-428 - Changing StringUtils.isAlpha, isAlphanumeric and isNumeric to return false when passed an empty String. Documenting this in the changes report and in the upgrade article. Also fixing a Javadoc c+p error in isNumericSpace and isAlphanumericSpace.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1075673 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/07e3d91d8caf2b06b6782ea25d80b57e51338e8d</link>
+    <actions>
+      <action>
+        <pre>cs == null</pre>
+        <post>cs == null || cs.length() == 0</post>
+      </action>
+      <action>
+        <pre>cs == null</pre>
+        <post>cs == null || cs.length() == 0</post>
+      </action>
+      <action>
+        <pre>cs == null</pre>
+        <post>cs == null || cs.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Enum.java" id="f0635cccad5bfdc0fb758a8627b480325dab202f">
+    <message>Implement changes to StringUtils.isEmpty and friends This is an incompatible change for isEmpty and isNotEmpty from 1.0   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137441 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f0635cccad5bfdc0fb758a8627b480325dab202f</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmpty(name)</pre>
+        <post>StringUtils.isEmptyOrNull(name)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="FloatRange.java" id="bec23232bc5841772e72f7f30893fef9449ffce3">
+    <message>Applying Boris' patch in LANG-481 to improve thread safety in the Range classes. The previous code's reuse of the hashCode variable for local operations means it is utterly non-thread-safe. Now uses a local variable so that the worst case should be the hashCode being calculated multiple times, but not ending up with different values.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@812236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bec23232bc5841772e72f7f30893fef9449ffce3</link>
+    <actions>
+      <action>
+        <pre>hashCode == 0</pre>
+        <post>temp == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="1d99bf252bf815fd632d198d8358459763f0da59">
+    <message>Fix indexOf and lastIndexOf with null input  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@230921 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1d99bf252bf815fd632d198d8358459763f0da59</link>
+    <actions>
+      <action>
+        <pre>startIndex &lt; 0</pre>
+        <post>str == null || startIndex &lt; 0</post>
+      </action>
+      <action>
+        <pre>startIndex &gt;= size</pre>
+        <post>str == null || startIndex &gt;= size</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Entities.java" id="c488d3996975aa24763a4b8c507756db8073738d">
+    <message>Applying optimisation from LANG-287. Thanks to Stepan Koltsov and Holger Hoffstatte.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@467467 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c488d3996975aa24763a4b8c507756db8073738d</link>
+    <actions>
+      <action>
+        <pre>len == 0</pre>
+        <post>firstAmp &lt; 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="4d3629f310e84cc24c0e5f09d97f5126692d0128">
+    <message>Applying my patch from LANG-535 - adding support to getShortClassName and getPackageName for arrays, including primitive arrays and multi-dimensional arrays. Also stopped getPackageName relying on the underlying class.getPackage as it's sometimes null  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@825420 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4d3629f310e84cc24c0e5f09d97f5126692d0128</link>
+    <actions>
+      <action>
+        <pre>className == null</pre>
+        <post>className == null || className.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="bf8041cb432379e3086a1520670da30e1c2b4fe0">
+    <message>Update Javadoc examples Change mid() to accept invalid startPos   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137480 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf8041cb432379e3086a1520670da30e1c2b4fe0</link>
+    <actions>
+      <action>
+        <pre>(pos &lt; 0) || (str != null &amp;&amp; pos &gt; str.length())</pre>
+        <post>pos &gt; str.length()</post>
+      </action>
+      <action>
+        <pre>(str == null) || (str.length() &lt;= len)</pre>
+        <post>str.length() &lt;= len</post>
+      </action>
+      <action>
+        <pre>(str == null) || (str.length() &lt;= len)</pre>
+        <post>str.length() &lt;= len</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="7891f8eaa09cbe1aac3ff7297614d27b755a3fbf">
+    <message>Javadoc  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1077965 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/7891f8eaa09cbe1aac3ff7297614d27b755a3fbf</link>
+    <actions>
+      <action>
+        <pre>type.isInstance(o) == false</pre>
+        <post>type.isInstance(obj) == false</post>
+      </action>
+      <action>
+        <pre>type.isInstance(o) == false</pre>
+        <post>type.isInstance(obj) == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CompareToBuilder.java" id="946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b">
+    <message>Fix infinite recursion in inner classes reflection methods from Per Velschow   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137232 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b</link>
+    <actions>
+      <action>
+        <pre>!Modifier.isStatic(f.getModifiers())</pre>
+        <post>(f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers())) &amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="cf21e27c9807829f1afc984015012ce32a5ed491">
+    <message>Bug#30929. Shorn Tolley pointed out that using equals() means you can't pass SQLException in and expect to get back extensions of SQLException.  Switching to isAssignableFrom allows you to do this.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137942 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/cf21e27c9807829f1afc984015012ce32a5ed491</link>
+    <actions>
+      <action>
+        <pre>throwables[i].getClass().equals(type)</pre>
+        <post>type.isAssignableFrom(throwables[i].getClass())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MethodUtils.java" id="84a814fb7c99a5cb3bad6c80932181883f92cacd">
+    <message>Fix PMD issues: "These nested if statements could be combined"  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1153241 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/84a814fb7c99a5cb3bad6c80932181883f92cacd</link>
+    <actions>
+      <action>
+        <pre>bestMatch == null || MemberUtils.compareParameterTypes(accessibleMethod.getParameterTypes(),bestMatch.getParameterTypes(),parameterTypes) &lt; 0</pre>
+        <post>accessibleMethod != null &amp;&amp; (bestMatch == null || MemberUtils.compareParameterTypes(accessibleMethod.getParameterTypes(),bestMatch.getParameterTypes(),parameterTypes) &lt; 0)</post>
+      </action>
+      <action>
+        <pre>accessibleMethod != null</pre>
+        <post>method.getName().equals(methodName) &amp;&amp; ClassUtils.isAssignable(parameterTypes,method.getParameterTypes(),true)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions>
+      <action>
+        <pre>testTransients || !Modifier.isTransient(f.getModifiers())</pre>
+        <post>!Modifier.isStatic(f.getModifiers())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrSubstitutor.java" id="006bd0caf8701b2dbe5bd54396275cf3ea40eca4">
+    <message>It's confusing to re-use field names locally  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1533551 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/006bd0caf8701b2dbe5bd54396275cf3ea40eca4</link>
+    <actions>
+      <action>
+        <pre>!substitutionInVariablesEnabled &amp;&amp; prefixMatcher.isMatch(varNameExprChars,i,i,varNameExprChars.length) != 0</pre>
+        <post>!substitutionInVariablesEnabled &amp;&amp; pfxMatcher.isMatch(varNameExprChars,i,i,varNameExprChars.length) != 0</post>
+      </action>
+      <action>
+        <pre>(valueDelimiterMatchLen=valueDelimiterMatcher.isMatch(varNameExprChars,i)) != 0</pre>
+        <post>(valueDelimiterMatchLen=valueDelimMatcher.isMatch(varNameExprChars,i)) != 0</post>
+      </action>
+      <action>
+        <pre>valueDelimiterMatcher != null</pre>
+        <post>valueDelimMatcher != null</post>
+      </action>
+      <action>
+        <pre>substitutionInVariablesEnabled &amp;&amp; (endMatchLen=prefixMatcher.isMatch(chars,pos,offset,bufEnd)) != 0</pre>
+        <post>substitutionInVariablesEnabled &amp;&amp; (endMatchLen=pfxMatcher.isMatch(chars,pos,offset,bufEnd)) != 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="LongRange.java" id="bec23232bc5841772e72f7f30893fef9449ffce3">
+    <message>Applying Boris' patch in LANG-481 to improve thread safety in the Range classes. The previous code's reuse of the hashCode variable for local operations means it is utterly non-thread-safe. Now uses a local variable so that the worst case should be the hashCode being calculated multiple times, but not ending up with different values.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@812236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bec23232bc5841772e72f7f30893fef9449ffce3</link>
+    <actions>
+      <action>
+        <pre>hashCode == 0</pre>
+        <post>temp == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MethodUtils.java" id="86bf5f4c6cdd3f214a3c7f0d8c5ae477683ec4ed">
+    <message>Moved isAssignmentCompatable method from MethodUtils into ReflectionUtils and renamed it. Enhanced existing isCompatible so that widening of primitives is allowed. Created test case for moved method.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137139 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/86bf5f4c6cdd3f214a3c7f0d8c5ae477683ec4ed</link>
+    <actions>
+      <action>
+        <pre>!isAssignmentCompatible(methodsParams[n],parameterTypes[n])</pre>
+        <post>!ReflectionUtils.isCompatable(parameterTypes[n],methodsParams[n])</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="aa63078a6842c23d816f189e13e6a5acec6b61b5">
+    <message>Using ArrayUtils.isEmpty() when testing arrays.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137758 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/aa63078a6842c23d816f189e13e6a5acec6b61b5</link>
+    <actions>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ToStringStyle.java" id="721a098add2800ffb138b65992fecec618f198f2">
+    <message>ToStringStyle setArrayEnd handled null incorrectly bug 31933, fix from Masato Tezuka   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@138011 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/721a098add2800ffb138b65992fecec618f198f2</link>
+    <actions>
+      <action>
+        <pre>arrayStart == null</pre>
+        <post>arrayEnd == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="BooleanUtils.java" id="b715ffafac8d20a681554e31546e59be7aa8dfbb">
+    <message>Simplifying for loop  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@770101 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/b715ffafac8d20a681554e31546e59be7aa8dfbb</link>
+    <actions>
+      <action>
+        <pre>array[i]</pre>
+        <post>element</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="d9bbb21458555d6ac90667382bbbe9f20338c6d2">
+    <message>Using StringUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137806 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d9bbb21458555d6ac90667382bbbe9f20338c6d2</link>
+    <actions>
+      <action>
+        <pre>str.length() == 0 || set == null || set.length() == 0</pre>
+        <post>str.length() == 0 || StringUtils.isEmpty(set)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="2f435baa687274dac335ed00aa943f2d35bbf9a2">
+    <message>Bugzilla Bug 30815 ArrayUtils.isEquals() throws ClassCastException when array1 and array2 are different dimension http://issues.apache.org/bugzilla/show_bug.cgi?id=30815   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137898 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2f435baa687274dac335ed00aa943f2d35bbf9a2</link>
+    <actions>
+      <action>
+        <pre>!lhsClass.isArray()</pre>
+        <post>lhs.getClass() != rhs.getClass()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrTokenizer.java" id="365628bb2700fa49777d80b72738aae4eb947f7d">
+    <message>Remove extraneous this object references  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@240402 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/365628bb2700fa49777d80b72738aae4eb947f7d</link>
+    <actions>
+      <action>
+        <pre>removeLen == 0 || this.getDelimiterMatcher().isMatch(chars,start,start,len) &gt; 0 || this.getQuoteMatcher().isMatch(chars,start,start,len) &gt; 0</pre>
+        <post>removeLen == 0 || getDelimiterMatcher().isMatch(chars,start,start,len) &gt; 0 || getQuoteMatcher().isMatch(chars,start,start,len) &gt; 0</post>
+      </action>
+      <action>
+        <pre>this.isIgnoreEmptyTokens()</pre>
+        <post>isIgnoreEmptyTokens()</post>
+      </action>
+      <action>
+        <pre>this.isEmptyTokenAsNull()</pre>
+        <post>isEmptyTokenAsNull()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Range.java" id="c3d61be192d990e2a810e11b23e125d6de47af7f">
+    <message>Don't assign parameter  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1565243 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c3d61be192d990e2a810e11b23e125d6de47af7f</link>
+    <actions>
+      <action>
+        <pre>comparator == null</pre>
+        <post>comp == null</post>
+      </action>
+      <action>
+        <pre>comparator.compare(element1,element2) &lt; 1</pre>
+        <post>this.comparator.compare(element1,element2) &lt; 1</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="AnnotationUtils.java" id="fc0b4fb3ae3a54cfde1f83c39a26b340f613c811">
+    <message>respect @javax.enterprise.util.Nonbinding  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1083107 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/fc0b4fb3ae3a54cfde1f83c39a26b340f613c811</link>
+    <actions>
+      <action>
+        <pre>m.getParameterTypes().length == 0 &amp;&amp; isValidAnnotationMemberType(m.getReturnType())</pre>
+        <post>m.getParameterTypes().length == 0 &amp;&amp; isValidAnnotationMemberType(m.getReturnType()) &amp;&amp; !isNonbindingMember(m)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumericEntityUnescaper.java" id="0b3a8a3128890f710700d04e38df48b883d11d91">
+    <message>Adding tests and resolving LANG-710, reported by Benjamin Valentin. Note that this changed such that the code will now escape an unfinished entity (i.e. &amp;#030). This matches browser behaviour.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1142389 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0b3a8a3128890f710700d04e38df48b883d11d91</link>
+    <actions>
+      <action>
+        <pre>input.charAt(index) == '&amp;' &amp;&amp; index &lt; (input.length() - 1) &amp;&amp; input.charAt(index + 1) == '#'</pre>
+        <post>input.charAt(index) == '&amp;' &amp;&amp; index &lt; seqEnd - 2 &amp;&amp; input.charAt(index + 1) == '#'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="926b64cdf2fd573f3c6ea4f684061050f5f9e60e">
+    <message>Fix bug in isNestedThrowable, shown on JDK&lt;1.4   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137511 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/926b64cdf2fd573f3c6ea4f684061050f5f9e60e</link>
+    <actions>
+      <action>
+        <pre>method != null</pre>
+        <post>method != null &amp;&amp; Throwable.class.isAssignableFrom(method.getReturnType())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="TypeUtils.java" id="a77b42a2b4850e60322d754e55476f3872702f55">
+    <message>Javadoc Remove unnecessary cast  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@966171 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a77b42a2b4850e60322d754e55476f3872702f55</link>
+    <actions>
+      <action>
+        <pre>isAssignable(midClass,superClass) &amp;&amp; isAssignable((Type)genericInterface,(Type)midClass)</pre>
+        <post>isAssignable(midClass,superClass) &amp;&amp; isAssignable(genericInterface,(Type)midClass)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="fcfe60a747c90b20166955df22b9387c84a4ae88">
+    <message>LANG-548 - Use Iterable instead of Collection  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@830042 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/fcfe60a747c90b20166955df22b9387c84a4ae88</link>
+    <actions>
+      <action>
+        <pre>collection == null</pre>
+        <post>iterable == null</post>
+      </action>
+      <action>
+        <pre>collection == null</pre>
+        <post>iterable == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MemberUtils.java" id="f122fa66907a01be53fde906440487ebd6199743">
+    <message>BEANUTILS-381 getMatchingAccessibleMethod does not correctly handle inheritance and method overloading - thanks to Todd Nine for the patch  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1037572 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f122fa66907a01be53fde906440487ebd6199743</link>
+    <actions>
+      <action>
+        <pre>destClass == null</pre>
+        <post>srcClass == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ReflectionUtils.java" id="100967384629f6f330863931f9c8214d71a4dc40">
+    <message>Corrected speiling mistake spotted by Jeff Varszegi.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137140 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/100967384629f6f330863931f9c8214d71a4dc40</link>
+    <actions>
+      <action>
+        <pre>isCompatable(requestedTypes[i],paramTypes[i]) == false</pre>
+        <post>isCompatible(requestedTypes[i],paramTypes[i]) == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b">
+    <message>Fix infinite recursion in inner classes reflection methods from Per Velschow   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137232 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b</link>
+    <actions>
+      <action>
+        <pre>!Modifier.isStatic(f.getModifiers())</pre>
+        <post>(f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers())) &amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DurationFormatUtils.java" id="1be46c510bb146993439524818a0b220f0ec4f7e">
+    <message>javadoc, spelling error.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137727 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1be46c510bb146993439524818a0b220f0ec4f7e</link>
+    <actions>
+      <action>
+        <pre>supressTrailingZeroElements == false</pre>
+        <post>suppressTrailingZeroElements == false</post>
+      </action>
+      <action>
+        <pre>supressLeadingZeroElements == false</pre>
+        <post>suppressLeadingZeroElements == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="dda3b1b60a64eea62e5a49930c0d162c381f8287">
+    <message>Use Collection.isEmpty() instead of size() == 0  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1199983 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dda3b1b60a64eea62e5a49930c0d162c381f8287</link>
+    <actions>
+      <action>
+        <pre>map.size() == 0</pre>
+        <post>map.isEmpty()</post>
+      </action>
+      <action>
+        <pre>collection.size() == 0</pre>
+        <post>collection.isEmpty()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="84a814fb7c99a5cb3bad6c80932181883f92cacd">
+    <message>Fix PMD issues: "These nested if statements could be combined"  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1153241 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/84a814fb7c99a5cb3bad6c80932181883f92cacd</link>
+    <actions>
+      <action>
+        <pre>chars[start] == '0' &amp;&amp; chars[start + 1] == 'x'</pre>
+        <post>sz &gt; start + 1 &amp;&amp; chars[start] == '0' &amp;&amp; chars[start + 1] == 'x'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="997f6505f3a009e387334cac8bef695fef9b654b">
+    <message>getCauseUsingWellKnownTypes(Throwable): Collapsed checks for instanceof NestableException and NestableRuntimeException into single check for Nestable interface.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@136971 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/997f6505f3a009e387334cac8bef695fef9b654b</link>
+    <actions>
+      <action>
+        <pre>t instanceof NestableRuntimeException</pre>
+        <post>t instanceof Nestable</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="db18b7fd137479cb107089c83caab16d6c4cbb2c">
+    <message>[LANG-715] CharSetUtils.squeeze() speedup.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1144916 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/db18b7fd137479cb107089c83caab16d6c4cbb2c</link>
+    <actions>
+      <action>
+        <pre>(ch == lastChar) &amp;&amp; (i != 0)</pre>
+        <post>ch == lastChar &amp;&amp; i != 0 &amp;&amp; chars.contains(ch)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ObjectUtils.java" id="34918ebe73b0e0e605d05cd805054f89c003862b">
+    <message>Fix to handle null input array, and remove check for NULL  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@881209 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/34918ebe73b0e0e605d05cd805054f89c003862b</link>
+    <actions>
+      <action>
+        <pre>val != null &amp;&amp; val != ObjectUtils.NULL</pre>
+        <post>val != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="e34df07747691c5fc25e4375a5974387bf38771c">
+    <message>Fix setLength()  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@230906 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e34df07747691c5fc25e4375a5974387bf38771c</link>
+    <actions>
+      <action>
+        <pre>length &lt; size</pre>
+        <post>length &gt; size</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DurationFormatUtils.java" id="0765e3b8913100dd1f8163aa597d6e233137d162">
+    <message>StringBuffer =&gt; StringBuilder where being used as a local-only buffer  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1391112 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0765e3b8913100dd1f8163aa597d6e233137d162</link>
+    <actions>
+      <action>
+        <pre>value instanceof StringBuffer</pre>
+        <post>value instanceof StringBuilder</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CompareToBuilder.java" id="48b1434bc6ac3e87813145299771bdb37de1a199">
+    <message>Replacing the creation of a List in the core of each Builder class to test contains on the excludeFields with a call to ArrayUtils.contains. Reported by Anthony Whitford in LANG-575  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@897421 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/48b1434bc6ac3e87813145299771bdb37de1a199</link>
+    <actions>
+      <action>
+        <pre>!excludedFieldList.contains(f.getName()) &amp;&amp; (f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers()))&amp;&amp; (!Modifier.isStatic(f.getModifiers()))</pre>
+        <post>!ArrayUtils.contains(excludeFields,f.getName()) &amp;&amp; (f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers()))&amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="02644db726c1e1b10af9c275bb63890a1f6cace5">
+    <message>Change the isTrue() method to cope with strings case insensitively   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137130 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/02644db726c1e1b10af9c275bb63890a1f6cace5</link>
+    <actions>
+      <action>
+        <pre>"yes".equals(str)</pre>
+        <post>"yes".equalsIgnoreCase(str)</post>
+      </action>
+      <action>
+        <pre>"on".equals(str)</pre>
+        <post>"on".equalsIgnoreCase(str)</post>
+      </action>
+      <action>
+        <pre>"true".equals(str)</pre>
+        <post>"true".equalsIgnoreCase(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="6ed8e576c4e13ac3ea05a3c5422236ea3affb799">
+    <message>Relax exceptions in left(), right() and mid()   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137552 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6ed8e576c4e13ac3ea05a3c5422236ea3affb799</link>
+    <actions>
+      <action>
+        <pre>len &lt; 0</pre>
+        <post>len &lt; 0 || pos &gt; str.length()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="WordUtils.java" id="de7502030b5ec6fa22d3b463065b3dfc1aab8248">
+    <message>simplified the implementation of capitalizeFully   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137844 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/de7502030b5ec6fa22d3b463065b3dfc1aab8248</link>
+    <actions>
+      <action>
+        <pre>str == null || (strLen=str.length()) == 0</pre>
+        <post>str == null || str.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f">
+    <message>Use String#isEmpty() instead of String#length() == 0  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1489692 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f</link>
+    <actions>
+      <action>
+        <pre>str.length() == 0 || deepEmpty(set)</pre>
+        <post>str.isEmpty() || deepEmpty(set)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberRange.java" id="6a20554d249f518e329edf35dd56223fb74ff970">
+    <message>Change javadoc to descrive the class (and its problems) more thoroughly   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137195 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6a20554d249f518e329edf35dd56223fb74ff970</link>
+    <actions>
+      <action>
+        <pre>max.intValue() &lt; 0</pre>
+        <post>max.doubleValue() &lt; 0</post>
+      </action>
+      <action>
+        <pre>min.intValue() &lt; 0</pre>
+        <post>min.doubleValue() &lt; 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DoubleRange.java" id="bec23232bc5841772e72f7f30893fef9449ffce3">
+    <message>Applying Boris' patch in LANG-481 to improve thread safety in the Range classes. The previous code's reuse of the hashCode variable for local operations means it is utterly non-thread-safe. Now uses a local variable so that the worst case should be the hashCode being calculated multiple times, but not ending up with different values.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@812236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bec23232bc5841772e72f7f30893fef9449ffce3</link>
+    <actions>
+      <action>
+        <pre>hashCode == 0</pre>
+        <post>temp == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="FastDateParser.java" id="bf0080b024e31f5d2c03acb846ef13812f531670">
+    <message>LANG-828 FastDateParser does not handle non-Gregorian calendars properly Fix bug in Java 7 (Locale.toString() format has changed)  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1390189 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf0080b024e31f5d2c03acb846ef13812f531670</link>
+    <actions>
+      <action>
+        <pre>localeName.equals("ja_JP_JP") || localeName.startsWith("th_TH")</pre>
+        <post>locale.equals(JAPANESE_IMPERIAL) || (locale.getLanguage().equals("th") &amp;&amp; locale.getCountry().equals("TH"))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="8e7826db74c6a38d98ca4f53cc3a203ee10066dd">
+    <message> PR: http://nagoya.apache.org/bugzilla/show_bug.cgi?id=26961 [lang][patch] Remove redundant check for null separator in StringUtils#join Submitted by:	Janek Bogucki Reviewed by:	Gary Gregory.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137795 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8e7826db74c6a38d98ca4f53cc3a203ee10066dd</link>
+    <actions>
+      <action>
+        <pre>(separator != null) &amp;&amp; (i &gt; 0)</pre>
+        <post>i &gt; 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ReflectionUtils.java" id="2efffe393caf942f01f72698d5abb3734b37c373">
+    <message>Rework isEmpty and isNotEmpty following user feedback   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137459 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2efffe393caf942f01f72698d5abb3734b37c373</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmptyOrNull(className)</pre>
+        <post>StringUtils.isEmpty(className)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="aef915fddb45aadfc3a10aaad7f4a2cad32af515">
+    <message>reread ThreadLocal value in synchronized block to avoid any timing issues  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@907375 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/aef915fddb45aadfc3a10aaad7f4a2cad32af515</link>
+    <actions>
+      <action>
+        <pre>s.isEmpty()</pre>
+        <post>registry != null &amp;&amp; registry.isEmpty()</post>
+      </action>
+      <action>
+        <pre>s != null</pre>
+        <post>registry != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="10054b995ef0326cbb2fea6fbe5c752461f8d200">
+    <message>getCause(Throwable): Perform a softer check on the return type of the argument's getCause() method, doing isAssignableFrom() instead of a hard memory address comparison.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@136962 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/10054b995ef0326cbb2fea6fbe5c752461f8d200</link>
+    <actions>
+      <action>
+        <pre>getCause != null &amp;&amp; getCause.getReturnType() == Throwable.class</pre>
+        <post>getCause != null &amp;&amp; Throwable.class.isAssignableFrom(getCause.getReturnType())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="FastDateFormat.java" id="85d673982ac789be1be5e1ba5ec13cd7dee1da5b">
+    <message>Fixed bug in getDateInstance(int, TimeZone, Locale). See bz #26646.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137772 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/85d673982ac789be1be5e1ba5ec13cd7dee1da5b</link>
+    <actions>
+      <action>
+        <pre>locale == null</pre>
+        <post>locale != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b">
+    <message>Fix infinite recursion in inner classes reflection methods from Per Velschow   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137232 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b</link>
+    <actions>
+      <action>
+        <pre>!Modifier.isStatic(f.getModifiers())</pre>
+        <post>(f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers())) &amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ReflectionUtils.java" id="86bf5f4c6cdd3f214a3c7f0d8c5ae477683ec4ed">
+    <message>Moved isAssignmentCompatable method from MethodUtils into ReflectionUtils and renamed it. Enhanced existing isCompatible so that widening of primitives is allowed. Created test case for moved method.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137139 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/86bf5f4c6cdd3f214a3c7f0d8c5ae477683ec4ed</link>
+    <actions>
+      <action>
+        <pre>ClassUtils.isAssignable(requestedTypes[i],paramTypes[i]) == false</pre>
+        <post>isCompatable(requestedTypes[i],paramTypes[i]) == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="535e6f54d28ff1245675d915bf6fcf2e62a6f48b">
+    <message>Fix infinite recursion in replace() when blank string used from Holger Krauth   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137231 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/535e6f54d28ff1245675d915bf6fcf2e62a6f48b</link>
+    <actions>
+      <action>
+        <pre>text == null</pre>
+        <post>text == null || repl == null || with == null || repl.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MemberUtils.java" id="0f9cfddaf5fa62f4d946cc451ca977f9ecf96a31">
+    <message>[LANG-961] org.apache.commons.lang3.reflect.FieldUtils.removeFinalModifier(Field) does not clean up after itself. Only call setAccessible if neccessary and tell the caller about it so it can undo the change if need be.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1563014 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0f9cfddaf5fa62f4d946cc451ca977f9ecf96a31</link>
+    <actions>
+      <action>
+        <pre>Modifier.isPublic(m.getModifiers()) &amp;&amp; isPackageAccess(m.getDeclaringClass().getModifiers())</pre>
+        <post>!o.isAccessible() &amp;&amp; Modifier.isPublic(m.getModifiers()) &amp;&amp; isPackageAccess(m.getDeclaringClass().getModifiers())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="c287cee5e895a384afedb682681653ca3eb60614">
+    <message>Changing appendAll and appendWithSeparators methods to take Iterable instead of Collection. LANG-548  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@889236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c287cee5e895a384afedb682681653ca3eb60614</link>
+    <actions>
+      <action>
+        <pre>coll != null &amp;&amp; coll.size() &gt; 0</pre>
+        <post>iterable != null</post>
+      </action>
+      <action>
+        <pre>coll != null &amp;&amp; coll.size() &gt; 0</pre>
+        <post>iterable != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Entities.java" id="dd2ae757d12554f290931f0b3c05e33ad993ecd1">
+    <message>Applying Alexander Kjall's patch from LANG-480; along with a unit test made from his example. Fixes unicode conversion above U+00FFFF being done into 2 characters  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@749095 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dd2ae757d12554f290931f0b3c05e33ad993ecd1</link>
+    <actions>
+      <action>
+        <pre>entityName == null</pre>
+        <post>c &gt;= 0x010000 &amp;&amp; i &lt; len - 1</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="d630833beb14bdf88ed8ea5de43617d6d97a42b7">
+    <message>Removing unnecessary &lt;p&gt; and Class variable  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@897533 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d630833beb14bdf88ed8ea5de43617d6d97a42b7</link>
+    <actions>
+      <action>
+        <pre>clss.isArray()</pre>
+        <post>object.getClass().isArray()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="ea58760e593ebcfca1db1d3d486ad4931afb1e41">
+    <message>Tweak deleteWhitespace to avoid creating a new String if possible   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137685 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ea58760e593ebcfca1db1d3d486ad4931afb1e41</link>
+    <actions>
+      <action>
+        <pre>str == null</pre>
+        <post>str == null || str.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="8b49f4ab0ec59db283e849bb62649c5a86420833">
+    <message>Ensure Validate has no inter-lang dependencies   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137843 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8b49f4ab0ec59db283e849bb62649c5a86420833</link>
+    <actions>
+      <action>
+        <pre>ArrayUtils.isEmpty(array)</pre>
+        <post>array == null || array.length == 0</post>
+      </action>
+      <action>
+        <pre>ArrayUtils.isEmpty(array)</pre>
+        <post>array == null || array.length == 0</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmpty(string)</pre>
+        <post>string == null || string.length() == 0</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmpty(string)</pre>
+        <post>string == null || string.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="1fd45a4f68ea497dfbdf1a67b8b8805a4a9b1166">
+    <message>Fixing LANG-300 (reported by Jeremy Lemaire) - 1L to 9L incorrectly throw exceptions when passed into NumberUtils.createNumber. Fixed in both the math.NumbersUtils and the deprecated NumberUtils classes.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@488819 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1fd45a4f68ea497dfbdf1a67b8b8805a4a9b1166</link>
+    <actions>
+      <action>
+        <pre>dec == null &amp;&amp; exp == null &amp;&amp; isDigits(numeric.substring(1)) &amp;&amp; (numeric.charAt(0) == '-' || Character.isDigit(numeric.charAt(0)))</pre>
+        <post>dec == null &amp;&amp; exp == null &amp;&amp; (numeric.charAt(0) == '-' &amp;&amp; isDigits(numeric.substring(1)) || isDigits(numeric))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="f0635cccad5bfdc0fb758a8627b480325dab202f">
+    <message>Implement changes to StringUtils.isEmpty and friends This is an incompatible change for isEmpty and isNotEmpty from 1.0   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137441 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f0635cccad5bfdc0fb758a8627b480325dab202f</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmpty(className)</pre>
+        <post>StringUtils.isEmptyOrNull(className)</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmpty(className)</pre>
+        <post>StringUtils.isEmptyOrNull(className)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Entities.java" id="ffa8800006c2a0e9f8ab498647bb8efcffdffea0">
+    <message>Fix unescape to handle invalid entities bug 29149, from Dan Goldberg   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137988 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ffa8800006c2a0e9f8ab498647bb8efcffdffea0</link>
+    <actions>
+      <action>
+        <pre>entityName.charAt(0) == '#'</pre>
+        <post>entityName.length() == 1</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="4b570ed400da3ac9f326d2e12a3fa22ef29cc0b8">
+    <message>Using StringUtils.isEmpty where possible.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137675 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4b570ed400da3ac9f326d2e12a3fa22ef29cc0b8</link>
+    <actions>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || set == null || set.length == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length() == 0</pre>
+        <post>StringUtils.isEmpty(str) || StringUtils.isEmpty(set)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || set == null || set.length == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length() == 0</pre>
+        <post>StringUtils.isEmpty(str) || StringUtils.isEmpty(set)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || set == null || set.length == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || set == null || set.length() == 0</pre>
+        <post>StringUtils.isEmpty(str) || StringUtils.isEmpty(set)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ToStringStyle.java" id="f4b9657b05cb32df729ea44f4b0be4665f49b88b">
+    <message>PR: http://issues.apache.org/bugzilla/show_bug.cgi?id=27876 [lang] ReflectionToStringBuilder.toString(null) throws exception by design new ToStringBuilder(null).toString() == the style's nullText.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137860 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f4b9657b05cb32df729ea44f4b0be4665f49b88b</link>
+    <actions>
+      <action>
+        <pre>fieldSeparatorAtEnd == false</pre>
+        <post>this.fieldSeparatorAtEnd == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="2f5c744471b24439a382b463a4a1c38741a722a4">
+    <message>Moving contains(String, int) over to CharSequence. LANG-687  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1082414 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2f5c744471b24439a382b463a4a1c38741a722a4</link>
+    <actions>
+      <action>
+        <pre>isEmpty(str)</pre>
+        <post>isEmpty(seq)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Fraction.java" id="0b2b82ad923b0455cde93286e3f504a1abd0863b">
+    <message>Adding first method check from Math's MathUtils.gcd method; and unit tests showing that this was needed. Bug reported and solved by Christian Semrau [LANG-662]  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1059749 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0b2b82ad923b0455cde93286e3f504a1abd0863b</link>
+    <actions>
+      <action>
+        <pre>Math.abs(u) &lt;= 1 || Math.abs(v) &lt;= 1</pre>
+        <post>Math.abs(u) == 1 || Math.abs(v) == 1</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="990e57f58e6ae9d490aa818c2ae528e528f5c1e8">
+    <message>Handles empty string now as well.  Submitted by:	Mark Ford   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137371 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/990e57f58e6ae9d490aa818c2ae528e528f5c1e8</link>
+    <actions>
+      <action>
+        <pre>lastIdx == 0</pre>
+        <post>lastIdx &lt;= 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="a285861cf07afacbe6e74a9a2ce69894a7944ff0">
+    <message>Eat own dog food: Use EMPTY instead of "".  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@619115 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a285861cf07afacbe6e74a9a2ce69894a7944ff0</link>
+    <actions>
+      <action>
+        <pre>(separator == null) || ("".equals(separator))</pre>
+        <post>(separator == null) || (EMPTY.equals(separator))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="BooleanUtils.java" id="49b8c603ef302a4b8d44070e9649770f6afe655d">
+    <message>Improve performance of BooleanUtils.toBoolean(String)   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137686 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/49b8c603ef302a4b8d44070e9649770f6afe655d</link>
+    <actions>
+      <action>
+        <pre>"yes".equalsIgnoreCase(str)</pre>
+        <post>ch == 'Y'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="4c5231383bec6b0f8728ed96102ee4bbd4d55124">
+    <message>Eat own dog food: Call StringUtils.isEmpty().  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1144925 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4c5231383bec6b0f8728ed96102ee4bbd4d55124</link>
+    <actions>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharUtils.java" id="3bd65dca470fea9c65150f0236e68db4caf26db6">
+    <message>Bullet proofing.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137835 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3bd65dca470fea9c65150f0236e68db4caf26db6</link>
+    <actions>
+      <action>
+        <pre>ch &lt; 128</pre>
+        <post>ch &lt; CHAR_ARRAY.length</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="ccd2ba474695f4719ccc8b3eca93104215c45f9b">
+    <message>Fixes arising from Clover report   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137530 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ccd2ba474695f4719ccc8b3eca93104215c45f9b</link>
+    <actions>
+      <action>
+        <pre>"\r".equals(str) || "\n".equals(str)</pre>
+        <post>ch == '\r' || ch == '\n'</post>
+      </action>
+      <action>
+        <pre>repeat == 1 || (inputLength=str.length()) == 0</pre>
+        <post>repeat == 1 || inputLength == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="883ffeef672c0f47f4b33858f361298316524785">
+    <message>Attaching Johann's fix to LANG-322 (via Ben's patch)  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@594394 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/883ffeef672c0f47f4b33858f361298316524785</link>
+    <actions>
+      <action>
+        <pre>chars[i] == INNER_CLASS_SEPARATOR_CHAR</pre>
+        <post>innerIdx != -1</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="da0612b348fcfa7679b92a5e9b8e1603e8e2da3a">
+    <message>isNumber(String) and createNumber(String) both modified to support "2.". LANG-521  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@893088 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/da0612b348fcfa7679b92a5e9b8e1603e8e2da3a</link>
+    <actions>
+      <action>
+        <pre>!Character.isDigit(lastChar)</pre>
+        <post>!Character.isDigit(lastChar) &amp;&amp; lastChar != '.'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberRange.java" id="bec23232bc5841772e72f7f30893fef9449ffce3">
+    <message>Applying Boris' patch in LANG-481 to improve thread safety in the Range classes. The previous code's reuse of the hashCode variable for local operations means it is utterly non-thread-safe. Now uses a local variable so that the worst case should be the hashCode being calculated multiple times, but not ending up with different values.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@812236 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bec23232bc5841772e72f7f30893fef9449ffce3</link>
+    <actions>
+      <action>
+        <pre>hashCode == 0</pre>
+        <post>temp == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ValuedEnum.java" id="ba897265c23ce959ba5e20065e3935f5b5f5d8c7">
+    <message>Extra tests and optimisations suggested by Clover   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137532 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ba897265c23ce959ba5e20065e3935f5b5f5d8c7</link>
+    <actions>
+      <action>
+        <pre>pos != -1</pre>
+        <post>iToString == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ReflectionUtils.java" id="f0635cccad5bfdc0fb758a8627b480325dab202f">
+    <message>Implement changes to StringUtils.isEmpty and friends This is an incompatible change for isEmpty and isNotEmpty from 1.0   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137441 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f0635cccad5bfdc0fb758a8627b480325dab202f</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmpty(className)</pre>
+        <post>StringUtils.isEmptyOrNull(className)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="RandomStringUtils.java" id="d2b38e02c0a70557d3e0401314940462ad51a9fa">
+    <message>Optimize performance of RandomStringUtils bug 35170, from Shaun Kalley  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@279985 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d2b38e02c0a70557d3e0401314940462ad51a9fa</link>
+    <actions>
+      <action>
+        <pre>(letters &amp;&amp; numbers &amp;&amp; Character.isLetterOrDigit(ch)) || (letters &amp;&amp; Character.isLetter(ch)) || (numbers &amp;&amp; Character.isDigit(ch))|| (!letters &amp;&amp; !numbers)</pre>
+        <post>(letters &amp;&amp; Character.isLetter(ch)) || (numbers &amp;&amp; Character.isDigit(ch)) || (!letters &amp;&amp; !numbers)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="8233881022b0f11e8bb37c9a8c708ec165ef35d3">
+    <message>Redo null/empty string checking for performance   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137522 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8233881022b0f11e8bb37c9a8c708ec165ef35d3</link>
+    <actions>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+      <action>
+        <pre>!validateNumber(str)</pre>
+        <post>str == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="13c7f19a5ad506340a7c8d8601ef4bf2426ab325">
+    <message>LANG-746 NumberUtils does not handle upper-case hex: 0X and -0X  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1160660 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/13c7f19a5ad506340a7c8d8601ef4bf2426ab325</link>
+    <actions>
+      <action>
+        <pre>str.startsWith("0x") || str.startsWith("-0x")</pre>
+        <post>str.startsWith("0x") || str.startsWith("-0x") || str.startsWith("0X")|| str.startsWith("-0X")</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ConstructorUtils.java" id="81da9efdadbed13c11c78ad3d9289f6f722aab4f">
+    <message>Review and cleanup Javadoc in ConstructorUtils  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1143735 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/81da9efdadbed13c11c78ad3d9289f6f722aab4f</link>
+    <actions>
+      <action>
+        <pre>null == ctor</pre>
+        <post>ctor == null</post>
+      </action>
+      <action>
+        <pre>null == ctor</pre>
+        <post>ctor == null</post>
+      </action>
+      <action>
+        <pre>null == args</pre>
+        <post>args == null</post>
+      </action>
+      <action>
+        <pre>null == args</pre>
+        <post>args == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="4c0660dd6f35347234caba70e86bfb02fa52546e">
+    <message>Add  overlay()  as a replacement for  overlayString()   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137551 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4c0660dd6f35347234caba70e86bfb02fa52546e</link>
+    <actions>
+      <action>
+        <pre>text == null</pre>
+        <post>str == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Enum.java" id="2efffe393caf942f01f72698d5abb3734b37c373">
+    <message>Rework isEmpty and isNotEmpty following user feedback   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137459 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2efffe393caf942f01f72698d5abb3734b37c373</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmptyOrNull(name)</pre>
+        <post>StringUtils.isEmpty(name)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NestableDelegate.java" id="6c0f8b6a2fd47ce7144de12e7c176f25dbd23413">
+    <message>rolled back BUG#30929 pending opinions   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137945 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6c0f8b6a2fd47ce7144de12e7c176f25dbd23413</link>
+    <actions>
+      <action>
+        <pre>type.isAssignableFrom(throwables[i].getClass())</pre>
+        <post>throwables[i].getClass().equals(type)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ConstructorUtils.java" id="1506b78c6b74101f7d7e5f6dc370e271a06e0b54">
+    <message>move/comment SuppressWarnings(unchecked)/refactor surrounding code  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@983709 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1506b78c6b74101f7d7e5f6dc370e271a06e0b54</link>
+    <actions>
+      <action>
+        <pre>ClassUtils.isAssignable(parameterTypes,ctors[i].getParameterTypes(),true)</pre>
+        <post>ClassUtils.isAssignable(parameterTypes,ctor.getParameterTypes(),true)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="TypeUtils.java" id="8185a9e681d6de5f40b0ed07b40730c9761bad37">
+    <message>[LANG-775] [LANG-776] fix related bugs dealing with type variable inheritance  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1203429 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8185a9e681d6de5f40b0ed07b40730c9761bad37</link>
+    <actions>
+      <action>
+        <pre>cls.getTypeParameters().length &gt; 0 || toClass.equals(cls)</pre>
+        <post>toClass.equals(cls)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="593366b38241223a4e008374111c20deabb20e8c">
+    <message>Create 'public static final' constants for the package separator and inner class separator characters/Strings.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137344 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/593366b38241223a4e008374111c20deabb20e8c</link>
+    <actions>
+      <action>
+        <pre>chars[i] == '.'</pre>
+        <post>chars[i] == PACKAGE_SEPARATOR_CHAR</post>
+      </action>
+      <action>
+        <pre>chars[i] == '$'</pre>
+        <post>chars[i] == INNER_CLASS_SEPARATOR_CHAR</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DefaultExceptionContext.java" id="a9f1ecc2febeb8957f493afbad2ea8e29a767e8e">
+    <message>Tidy up contexted exception classes, better Javadoc, final variables, etc.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@829400 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a9f1ecc2febeb8957f493afbad2ea8e29a767e8e</link>
+    <actions>
+      <action>
+        <pre>contextKeyList.size() &gt; 0</pre>
+        <post>contextValueMap.size() &gt; 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ObjectUtils.java" id="fe44be595ffc4dd336afb63685fa97457c48b2d2">
+    <message>Add identityToString Make constructor public in line with NumberUtils and StringUtils Javadoc tidy   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137038 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/fe44be595ffc4dd336afb63685fa97457c48b2d2</link>
+    <actions>
+      <action>
+        <pre>object2 == null</pre>
+        <post>(object1 == null) || (object2 == null)</post>
+      </action>
+      <action>
+        <pre>object1 == null</pre>
+        <post>object1 == object2</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="bc73f131ea935176f1707b941c1bfb039c459a18">
+    <message>Applying Joanne's subsequent patch from LANG-875 making appendIfMissing use the same logic for null as endsWith (by reusing endsWith).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1476070 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bc73f131ea935176f1707b941c1bfb039c459a18</link>
+    <actions>
+      <action>
+        <pre>isEmpty(p) || startsWith(str,p,ignoreCase)</pre>
+        <post>startsWith(str,p,ignoreCase)</post>
+      </action>
+      <action>
+        <pre>isEmpty(s) || endsWith(str,s,ignoreCase)</pre>
+        <post>endsWith(str,s,ignoreCase)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DateUtils.java" id="1fb95c93ba93ad713045da7e732bf59c0292c019">
+    <message>Applying 'fix' for LANG-530. DateUtils.parseDate now protects the common use case of FastDateFormat ZZ output, namely ZZ on the end of the pattern, from being passed to SimpleDateFormat as is. Use of ZZ elsewhere in the pattern isn't protected and will want to consider emulating the String changes made in this patch.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@891572 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1fb95c93ba93ad713045da7e732bf59c0292c019</link>
+    <actions>
+      <action>
+        <pre>date != null &amp;&amp; pos.getIndex() == str.length()</pre>
+        <post>date != null &amp;&amp; pos.getIndex() == str2.length()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ToStringStyle.java" id="34aa8b03da6bf8ad9c605cc833f215519691e4aa">
+    <message>PR: http://issues.apache.org/bugzilla/show_bug.cgi?id=27876 [lang] ReflectionToStringBuilder.toString(null) throws exception by design ReflectionToStringBuilder.toString is now null-safe and returns the style's nullText. ToStringBuilder constructors are now null-safe. A new ToStringBuilder on a null followed by a call to toString returns "".   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137857 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/34aa8b03da6bf8ad9c605cc833f215519691e4aa</link>
+    <actions>
+      <action>
+        <pre>useIdentityHashCode</pre>
+        <post>this.isUseIdentityHashCode() &amp;&amp; object != null</post>
+      </action>
+      <action>
+        <pre>useClassName</pre>
+        <post>useClassName &amp;&amp; object != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Fraction.java" id="8b648e0f32fcd99f81b5a781eece2c54b9b50627">
+    <message>Fixing -1/1 bug as per #37661  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@383487 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8b648e0f32fcd99f81b5a781eece2c54b9b50627</link>
+    <actions>
+      <action>
+        <pre>toProperString == null</pre>
+        <post>numerator == 0</post>
+      </action>
+      <action>
+        <pre>numerator == denominator</pre>
+        <post>numerator == -1 * denominator</post>
+      </action>
+      <action>
+        <pre>numerator == 0</pre>
+        <post>numerator == denominator</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="05121ddadb515b4f03f0e992914095eb03a0f199">
+    <message>Using ArrayUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137809 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/05121ddadb515b4f03f0e992914095eb03a0f199</link>
+    <actions>
+      <action>
+        <pre>isEmpty(str) || searchChars == null || searchChars.length == 0</pre>
+        <post>isEmpty(str) || ArrayUtils.isEmpty(searchChars)</post>
+      </action>
+      <action>
+        <pre>isEmpty(str) || searchChars == null || searchChars.length == 0</pre>
+        <post>isEmpty(str) || ArrayUtils.isEmpty(searchChars)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="1fd45a4f68ea497dfbdf1a67b8b8805a4a9b1166">
+    <message>Fixing LANG-300 (reported by Jeremy Lemaire) - 1L to 9L incorrectly throw exceptions when passed into NumberUtils.createNumber. Fixed in both the math.NumbersUtils and the deprecated NumberUtils classes.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@488819 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1fd45a4f68ea497dfbdf1a67b8b8805a4a9b1166</link>
+    <actions>
+      <action>
+        <pre>dec == null &amp;&amp; exp == null &amp;&amp; isDigits(numeric.substring(1)) &amp;&amp; (numeric.charAt(0) == '-' || Character.isDigit(numeric.charAt(0)))</pre>
+        <post>dec == null &amp;&amp; exp == null &amp;&amp; (numeric.charAt(0) == '-' &amp;&amp; isDigits(numeric.substring(1)) || isDigits(numeric))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="TypeUtils.java" id="a26732a271ab2060e8c7f8286cb4f79006e08f4e">
+    <message>TypeUtils wildcard fixes  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1594387 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a26732a271ab2060e8c7f8286cb4f79006e08f4e</link>
+    <actions>
+      <action>
+        <pre>!(upperBounds.length == 1 &amp;&amp; Object.class.equals(upperBounds[0]))</pre>
+        <post>upperBounds.length &gt; 1 || upperBounds.length == 1 &amp;&amp; !Object.class.equals(upperBounds[0])</post>
+      </action>
+      <action>
+        <pre>lowerBounds.length &gt; 0</pre>
+        <post>lowerBounds.length &gt; 1 || lowerBounds.length == 1 &amp;&amp; lowerBounds[0] != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CompareToBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions>
+      <action>
+        <pre>testTransients || !Modifier.isTransient(f.getModifiers())</pre>
+        <post>!Modifier.isStatic(f.getModifiers())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="BooleanUtils.java" id="b0bb16afecebe9b98188ce2fa7243d7ad24d8f22">
+    <message>Fix Javadoc bug; Improve implementation and tests  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1133336 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/b0bb16afecebe9b98188ce2fa7243d7ad24d8f22</link>
+    <actions>
+      <action>
+        <pre>str == null</pre>
+        <post>str != null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Validate.java" id="7d56aeb2147b6e5340441fdb8a843c09ac79a834">
+    <message>Rename allElementsOfClass to allElementsOfType, and change to instanceof check   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137964 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/7d56aeb2147b6e5340441fdb8a843c09ac79a834</link>
+    <actions>
+      <action>
+        <pre>(it.next().getClass().equals(clazz)) == false</pre>
+        <post>clazz.isInstance(it.next()) == false</post>
+      </action>
+      <action>
+        <pre>(it.next().getClass().equals(clazz)) == false</pre>
+        <post>clazz.isInstance(it.next()) == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="4b2ecca78962f13266dea68d2b8e72db57253ead">
+    <message>LANG-1026: Bring static method references in StringUtils to consistent style. Thanks to Alex Yursha  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1610149 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4b2ecca78962f13266dea68d2b8e72db57253ead</link>
+    <actions>
+      <action>
+        <pre>StringUtils.startsWith(string,searchString)</pre>
+        <post>startsWith(string,searchString)</post>
+      </action>
+      <action>
+        <pre>StringUtils.endsWith(string,searchString)</pre>
+        <post>endsWith(string,searchString)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrMatcher.java" id="4c5231383bec6b0f8728ed96102ee4bbd4d55124">
+    <message>Eat own dog food: Call StringUtils.isEmpty().  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1144925 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4c5231383bec6b0f8728ed96102ee4bbd4d55124</link>
+    <actions>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f">
+    <message>Use String#isEmpty() instead of String#length() == 0  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1489692 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f</link>
+    <actions>
+      <action>
+        <pre>nullText != null &amp;&amp; nullText.length() == 0</pre>
+        <post>nullText != null &amp;&amp; nullText.isEmpty()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="37c66d1c8b405e3fbd7e9a78e6b5b8ccf223426f">
+    <message>merge ClassUtils isAssignable w/ autoboxing from LANG_POST_2_4 branch  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@653907 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/37c66d1c8b405e3fbd7e9a78e6b5b8ccf223426f</link>
+    <actions>
+      <action>
+        <pre>isAssignable(classArray[i],toClassArray[i]) == false</pre>
+        <post>isAssignable(classArray[i],toClassArray[i],autoboxing) == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="48b1434bc6ac3e87813145299771bdb37de1a199">
+    <message>Replacing the creation of a List in the core of each Builder class to test contains on the excludeFields with a call to ArrayUtils.contains. Reported by Anthony Whitford in LANG-575  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@897421 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/48b1434bc6ac3e87813145299771bdb37de1a199</link>
+    <actions>
+      <action>
+        <pre>!excludedFieldList.contains(f.getName()) &amp;&amp; (f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers()))&amp;&amp; (!Modifier.isStatic(f.getModifiers()))</pre>
+        <post>!ArrayUtils.contains(excludeFields,f.getName()) &amp;&amp; (f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers()))&amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="87f9e96e744b1e05b1ba10203258e5f0152c0b46">
+    <message>Added  public static String removeEnd(String str, String remove). Reimpl'd removeStart.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137698 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/87f9e96e744b1e05b1ba10203258e5f0152c0b46</link>
+    <actions>
+      <action>
+        <pre>pos == -1</pre>
+        <post>str.startsWith(remove)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ReflectionToStringBuilder.java" id="308f4b5a2183a53ea13a4ecb1fba2de77e3ae66d">
+    <message>Cloning the output from getExcludeFieldNames, adjusting the code to use the attribute directly so it doesn't pay the clone() cost every time and changing the attribute from private to protected to let subclasses retain the ability to modify the field names (if that is why a getExcludeFieldNames method existed). Document in LANG-489  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@775432 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/308f4b5a2183a53ea13a4ecb1fba2de77e3ae66d</link>
+    <actions>
+      <action>
+        <pre>this.getExcludeFieldNames() != null &amp;&amp; Arrays.binarySearch(this.getExcludeFieldNames(),field.getName()) &gt;= 0</pre>
+        <post>this.excludeFieldNames != null &amp;&amp; Arrays.binarySearch(this.excludeFieldNames,field.getName()) &gt;= 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="3bd989dd32c038da2d5fa44c363cd4c695b6eeac">
+    <message>Eat own dog food: use StringUtils.isEmpty().  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1527373 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3bd989dd32c038da2d5fa44c363cd4c695b6eeac</link>
+    <actions>
+      <action>
+        <pre>cs == null || cs.length() == 0</pre>
+        <post>isEmpty(cs)</post>
+      </action>
+      <action>
+        <pre>cs == null || cs.length() == 0</pre>
+        <post>isEmpty(cs)</post>
+      </action>
+      <action>
+        <pre>cs == null || cs.length() == 0</pre>
+        <post>isEmpty(cs)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringEscapeUtils.java" id="29a7fd5e735ab0fb3c4196a24e977a643eedc004">
+    <message>LANG-374 - implement Sebb's improvement to use StringUtils.containsNone()  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@595927 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/29a7fd5e735ab0fb3c4196a24e977a643eedc004</link>
+    <actions>
+      <action>
+        <pre>!containsCsvChars(str)</pre>
+        <post>StringUtils.containsNone(str,CSV_SEARCH_CHARS)</post>
+      </action>
+      <action>
+        <pre>!containsCsvChars(str)</pre>
+        <post>StringUtils.containsNone(str,CSV_SEARCH_CHARS)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="UnicodeUnescaper.java" id="84a814fb7c99a5cb3bad6c80932181883f92cacd">
+    <message>Fix PMD issues: "These nested if statements could be combined"  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1153241 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/84a814fb7c99a5cb3bad6c80932181883f92cacd</link>
+    <actions>
+      <action>
+        <pre>(index + 1 &lt; input.length()) &amp;&amp; input.charAt(index + 1) == 'u'</pre>
+        <post>input.charAt(index) == '\\' &amp;&amp; (index + 1 &lt; input.length()) &amp;&amp; input.charAt(index + 1) == 'u'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MethodUtils.java" id="1cd1cee677b5a82222044978dfb51b424a94c7a1">
+    <message>Make MethodUtils depend on ReflectionUtils parameter set comparasons   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137142 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1cd1cee677b5a82222044978dfb51b424a94c7a1</link>
+    <actions>
+      <action>
+        <pre>methodParamSize == paramSize</pre>
+        <post>methods[i].getName().equals(methodName)</post>
+      </action>
+      <action>
+        <pre>match</pre>
+        <post>ReflectionUtils.isCompatible(parameterTypes,methodsParams)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="aa63078a6842c23d816f189e13e6a5acec6b61b5">
+    <message>Using ArrayUtils.isEmpty() when testing arrays.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137758 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/aa63078a6842c23d816f189e13e6a5acec6b61b5</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmpty(str) || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || ArrayUtils.isEmpty(set)</post>
+      </action>
+      <action>
+        <pre>str.length() == 0 || set == null || set.length == 0</pre>
+        <post>str.length() == 0 || ArrayUtils.isEmpty(set)</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmpty(str) || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || ArrayUtils.isEmpty(set)</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmpty(str) || set == null || set.length == 0</pre>
+        <post>StringUtils.isEmpty(str) || ArrayUtils.isEmpty(set)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="WordWrapUtils.java" id="a8a822a80e3fd91fd2fb61d088e8666869a8fd52">
+    <message>Javadoc clarity   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137609 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a8a822a80e3fd91fd2fb61d088e8666869a8fd52</link>
+    <actions>
+      <action>
+        <pre>nextLine.length() &gt; wrapColumn</pre>
+        <post>nextLine.length() &gt; lineLength</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="6c0f8b6a2fd47ce7144de12e7c176f25dbd23413">
+    <message>rolled back BUG#30929 pending opinions   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137945 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6c0f8b6a2fd47ce7144de12e7c176f25dbd23413</link>
+    <actions>
+      <action>
+        <pre>type.isAssignableFrom(throwables[i].getClass())</pre>
+        <post>throwables[i].getClass().equals(type)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CompareToBuilder.java" id="76c43161b2e76f4976d1aec4aaf4f43e8ad914ae">
+    <message>Applying Pete Gieser's enhancement for the CompareToBuilder - a clone of the EqualsBuilder and HashCodeBuilder fixes previously applied. Bugzilla issue #39398  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@397016 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/76c43161b2e76f4976d1aec4aaf4f43e8ad914ae</link>
+    <actions>
+      <action>
+        <pre>(f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers())) &amp;&amp; (!Modifier.isStatic(f.getModifiers()))</pre>
+        <post>!excludedFieldList.contains(f.getName()) &amp;&amp; (f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers()))&amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="d9bbb21458555d6ac90667382bbbe9f20338c6d2">
+    <message>Using StringUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137806 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d9bbb21458555d6ac90667382bbbe9f20338c6d2</link>
+    <actions>
+      <action>
+        <pre>(str == null) || (str.length() == 0)</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="9c16f351d262bf0b3388cfae444e5bc6c9ff2cf8">
+    <message>Fix http://nagoya.apache.org/bugzilla/show_bug.cgi?id=21904 as suggested (but with the guard clause factored in a method.)   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137520 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/9c16f351d262bf0b3388cfae444e5bc6c9ff2cf8</link>
+    <actions>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+      <action>
+        <pre>str == null</pre>
+        <post>!validateNumber(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="f37f0b06b7549cd5b4a7d8cf9d70677f494a723d">
+    <message>Using StringUtils.isEmpty() when testing Strings.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137705 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f37f0b06b7549cd5b4a7d8cf9d70677f494a723d</link>
+    <actions>
+      <action>
+        <pre>(str == null) || (str.length() == 0)</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+      <action>
+        <pre>(str == null) || (str.length() == 0)</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ArrayUtils.java" id="aa63078a6842c23d816f189e13e6a5acec6b61b5">
+    <message>Using ArrayUtils.isEmpty() when testing arrays.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137758 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/aa63078a6842c23d816f189e13e6a5acec6b61b5</link>
+    <actions>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+      <action>
+        <pre>array == null || array.length == 0</pre>
+        <post>ArrayUtils.isEmpty(array)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="d2e0998539f99243bb8d69da6845b2905cd610f0">
+    <message>Applying the optimisation advised by Paul Benedict in #39368  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@399127 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d2e0998539f99243bb8d69da6845b2905cd610f0</link>
+    <actions>
+      <action>
+        <pre>index &lt; replaceChars.length()</pre>
+        <post>index &lt; replaceCharsLength</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumericEntityUnescaper.java" id="8bbab3898bb91f1efa442b3997f92be8ce191d02">
+    <message>Implemented TODO to protect unescaper from ArrayIndexOutOfBounds  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1065215 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8bbab3898bb91f1efa442b3997f92be8ce191d02</link>
+    <actions>
+      <action>
+        <pre>input.charAt(index) == '&amp;' &amp;&amp; input.charAt(index + 1) == '#'</pre>
+        <post>input.charAt(index) == '&amp;' &amp;&amp; index &lt; (input.length() - 1) &amp;&amp; input.charAt(index + 1) == '#'</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="687b2e62b7c6e81cd9d5c872b7fa9cc8fd3f1509">
+    <message>LANG-747 NumberUtils does not handle Long Hex numbers  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1507169 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/687b2e62b7c6e81cd9d5c872b7fa9cc8fd3f1509</link>
+    <actions>
+      <action>
+        <pre>hexDigits &gt; 16</pre>
+        <post>hexDigits &gt; 16 || (hexDigits == 16 &amp;&amp; firstSigDigit &gt; '7')</post>
+      </action>
+      <action>
+        <pre>hexDigits &gt; 8</pre>
+        <post>hexDigits &gt; 8 || (hexDigits == 8 &amp;&amp; firstSigDigit &gt; '7')</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="5db36decad4ffe41894c81d56021c42f604f31ac">
+    <message>Javadoc fixes and a refactoring to use StringUtils.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137415 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/5db36decad4ffe41894c81d56021c42f604f31ac</link>
+    <actions>
+      <action>
+        <pre>methodName != null &amp;&amp; methodName.length() &gt; 0</pre>
+        <post>StringUtils.isNotEmpty(methodName)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="MethodUtils.java" id="100967384629f6f330863931f9c8214d71a4dc40">
+    <message>Corrected speiling mistake spotted by Jeff Varszegi.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137140 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/100967384629f6f330863931f9c8214d71a4dc40</link>
+    <actions>
+      <action>
+        <pre>methods[i].getName().equals(methodName) &amp;&amp; ReflectionUtils.isCompatable(paramTypes,methods[i].getParameterTypes())</pre>
+        <post>methods[i].getName().equals(methodName) &amp;&amp; ReflectionUtils.isCompatible(paramTypes,methods[i].getParameterTypes())</post>
+      </action>
+      <action>
+        <pre>!ReflectionUtils.isCompatable(parameterTypes[n],methodsParams[n])</pre>
+        <post>!ReflectionUtils.isCompatible(parameterTypes[n],methodsParams[n])</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="c2560c028173c3bc0a4627d4ce5ce221bcc9be66">
+    <message>Making it so that NumberUtils.createNumber throws a NumberFormatException instead of a StringIndexOutOfBoundsException when Strings such as 1eE are passed in. Thanks to Ingo Heinrich's report and patch in LANG-638  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@981736 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c2560c028173c3bc0a4627d4ce5ce221bcc9be66</link>
+    <actions>
+      <action>
+        <pre>expPos &lt; decPos</pre>
+        <post>expPos &lt; decPos || expPos &gt; str.length()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="2efffe393caf942f01f72698d5abb3734b37c373">
+    <message>Rework isEmpty and isNotEmpty following user feedback   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137459 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2efffe393caf942f01f72698d5abb3734b37c373</link>
+    <actions>
+      <action>
+        <pre>StringUtils.isEmptyOrNull(className)</pre>
+        <post>StringUtils.isEmpty(className)</post>
+      </action>
+      <action>
+        <pre>StringUtils.isEmptyOrNull(className)</pre>
+        <post>StringUtils.isEmpty(className)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DateUtils.java" id="a26102b3007b34100fbd3ee5e457374f4a7b9140">
+    <message>corrected calendar field used to calculate the offset when modifying the hour for a round or truncated based on AM_PM   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137881 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/a26102b3007b34100fbd3ee5e457374f4a7b9140</link>
+    <actions>
+      <action>
+        <pre>fields[i][0] == Calendar.HOUR</pre>
+        <post>fields[i][0] == Calendar.HOUR_OF_DAY</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NestableDelegate.java" id="cf21e27c9807829f1afc984015012ce32a5ed491">
+    <message>Bug#30929. Shorn Tolley pointed out that using equals() means you can't pass SQLException in and expect to get back extensions of SQLException.  Switching to isAssignableFrom allows you to do this.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137942 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/cf21e27c9807829f1afc984015012ce32a5ed491</link>
+    <actions>
+      <action>
+        <pre>throwables[i].getClass().equals(type)</pre>
+        <post>type.isAssignableFrom(throwables[i].getClass())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="6496decede28407a674fad09257dacdf9270c775">
+    <message>LANG-972 NumberUtils#isNumber does not allow for hex 0XABCD  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1566963 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6496decede28407a674fad09257dacdf9270c775</link>
+    <actions>
+      <action>
+        <pre>sz &gt; start + 1 &amp;&amp; chars[start] == '0' &amp;&amp; chars[start + 1] == 'x'</pre>
+        <post>sz &gt; start + 1 &amp;&amp; chars[start] == '0' &amp;&amp; ((chars[start + 1] == 'x') || (chars[start + 1] == 'X'))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExtendedMessageFormat.java" id="dda3b1b60a64eea62e5a49930c0d162c381f8287">
+    <message>Use Collection.isEmpty() instead of size() == 0  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1199983 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dda3b1b60a64eea62e5a49930c0d162c381f8287</link>
+    <actions>
+      <action>
+        <pre>coll == null || coll.size() == 0</pre>
+        <post>coll == null || coll.isEmpty()</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberRange.java" id="dd7810b79139918435d5575f66ab17672eaf8644">
+    <message>Fixup raw types for private variables (non-API)  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@819703 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dd7810b79139918435d5575f66ab17672eaf8644</link>
+    <actions>
+      <action>
+        <pre>num instanceof Comparable == false</pre>
+        <post>num instanceof Comparable&lt;?&gt; == false</post>
+      </action>
+      <action>
+        <pre>num1 instanceof Comparable == false</pre>
+        <post>num1 instanceof Comparable&lt;?&gt; == false</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="266b9b834b2b44c77fb9886938ce99bb1c148858">
+    <message>LANG-971 NumberUtils#isNumber(String) fails to reject invalid Octal numbers  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1566967 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/266b9b834b2b44c77fb9886938ce99bb1c148858</link>
+    <actions>
+      <action>
+        <pre>sz &gt; start + 1 &amp;&amp; chars[start] == '0' &amp;&amp; ((chars[start + 1] == 'x') || (chars[start + 1] == 'X'))</pre>
+        <post>(chars[start + 1] == 'x') || (chars[start + 1] == 'X')</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f">
+    <message>Use String#isEmpty() instead of String#length() == 0  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1489692 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf2ea1b3572c785c4082f1b1f70b0e91b9cea81f</link>
+    <actions>
+      <action>
+        <pre>separator.length() == 0</pre>
+        <post>separator.isEmpty()</post>
+      </action>
+      <action>
+        <pre>stripChars.length() == 0</pre>
+        <post>stripChars.isEmpty()</post>
+      </action>
+      <action>
+        <pre>stripChars.length() == 0</pre>
+        <post>stripChars.isEmpty()</post>
+      </action>
+      <action>
+        <pre>noMoreMatchesForReplIndex[i] || searchList[i] == null || searchList[i].length() == 0 || replacementList[i] == null</pre>
+        <post>noMoreMatchesForReplIndex[i] || searchList[i] == null || searchList[i].isEmpty() || replacementList[i] == null</post>
+      </action>
+      <action>
+        <pre>str.length() == 0</pre>
+        <post>str.isEmpty()</post>
+      </action>
+      <action>
+        <pre>noMoreMatchesForReplIndex[i] || searchList[i] == null || searchList[i].length() == 0 || replacementList[i] == null</pre>
+        <post>noMoreMatchesForReplIndex[i] || searchList[i] == null || searchList[i].isEmpty() || replacementList[i] == null</post>
+      </action>
+      <action>
+        <pre>text == null || text.length() == 0 || searchList == null || searchList.length == 0 || replacementList == null || replacementList.length == 0</pre>
+        <post>text == null || text.isEmpty() || searchList == null || searchList.length == 0 || replacementList == null || replacementList.length == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ArrayUtils.java" id="2087934578e7b37953d63a82315248b0cbe56eb3">
+    <message>generics for addAll(Object[], Object[]) + varargs for all addAll addends  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@818214 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2087934578e7b37953d63a82315248b0cbe56eb3</link>
+    <actions>
+      <action>
+        <pre>object instanceof Map.Entry</pre>
+        <post>object instanceof Map.Entry&lt;?,?&gt;</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="fb43c79171a3df4efef946777b13f7545998ee29">
+    <message>Fixes and better unit test code coverage from Nathan Beyer [nbeyer@kc.rr.com].   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@226934 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/fb43c79171a3df4efef946777b13f7545998ee29</link>
+    <actions>
+      <action>
+        <pre>thisBuf[i] == ch</pre>
+        <post>buf[i] == ch</post>
+      </action>
+      <action>
+        <pre>str.charAt(j) != thisBuf[i + j]</pre>
+        <post>str.charAt(j) != buf[i + j]</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="0760da507bd858abd2be7c8545d43d856ad58f6a">
+    <message>Updating the BigDecimal.compareTo(Object) to BigDecimal.compareTo(BigDecimal) to match JDK change - fixes LANG-468/LANG-464  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@711969 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0760da507bd858abd2be7c8545d43d856ad58f6a</link>
+    <actions>
+      <action>
+        <pre>lhs instanceof java.math.BigDecimal</pre>
+        <post>lhs instanceof java.math.BigDecimal &amp;&amp; rhs instanceof java.math.BigDecimal</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="48b1434bc6ac3e87813145299771bdb37de1a199">
+    <message>Replacing the creation of a List in the core of each Builder class to test contains on the excludeFields with a call to ArrayUtils.contains. Reported by Anthony Whitford in LANG-575  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@897421 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/48b1434bc6ac3e87813145299771bdb37de1a199</link>
+    <actions>
+      <action>
+        <pre>!excludedFieldList.contains(field.getName()) &amp;&amp; (field.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(field.getModifiers()))&amp;&amp; (!Modifier.isStatic(field.getModifiers()))</pre>
+        <post>!ArrayUtils.contains(excludeFields,field.getName()) &amp;&amp; (field.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(field.getModifiers()))&amp;&amp; (!Modifier.isStatic(field.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions>
+      <action>
+        <pre>testTransients || !Modifier.isTransient(f.getModifiers())</pre>
+        <post>!Modifier.isStatic(f.getModifiers())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrTokenizer.java" id="84a814fb7c99a5cb3bad6c80932181883f92cacd">
+    <message>Fix PMD issues: "These nested if statements could be combined"  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1153241 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/84a814fb7c99a5cb3bad6c80932181883f92cacd</link>
+    <actions>
+      <action>
+        <pre>isQuote(chars,pos,len,quoteStart,quoteLen)</pre>
+        <post>quoteLen &gt; 0 &amp;&amp; isQuote(chars,pos,len,quoteStart,quoteLen)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="38bf7048571f3bc8dd34d14691906426444e4381">
+    <message>https://issues.apache.org/jira/browse/LANG-607 StringUtils.containsAny methods incorrectly matches Unicode 2.0+ supplementary characters.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@922703 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/38bf7048571f3bc8dd34d14691906426444e4381</link>
+    <actions>
+      <action>
+        <pre>searchChars[j] == ch</pre>
+        <post>searchChars[j + 1] == cs.charAt(i + 1)</post>
+      </action>
+      <action>
+        <pre>cs == null || cs.length() == 0 || searchChars == null || searchChars.length == 0</pre>
+        <post>isEmpty(cs) || ArrayUtils.isEmpty(searchChars)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="0fa987c44d2216125e1f4e99a86eff872c8c826e">
+    <message>Move remove code to relevant position in source file   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137700 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0fa987c44d2216125e1f4e99a86eff872c8c826e</link>
+    <actions>
+      <action>
+        <pre>remove == null || remove.length() == 0</pre>
+        <post>str == null || str.length() == 0 || remove == null || remove.length() == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>str == null || str.length() == 0 || remove == null || remove.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="DurationFormatUtils.java" id="da87a8669b475ce648553ade59882f21f5245eed">
+    <message>fixing the optimisation separation   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137937 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/da87a8669b475ce648553ade59882f21f5245eed</link>
+    <actions>
+      <action>
+        <pre>millis &gt; 28 * DateUtils.MILLIS_PER_DAY</pre>
+        <post>millis &gt;= 28 * DateUtils.MILLIS_PER_DAY</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Entities.java" id="214abbce3b19d4ab58caed896b919bee8b469ee1">
+    <message>Severity	Description	Resource	In Folder	Location	Creation Time 	Unnecessary cast to type int for expression of type char	Entities.java	Apache Jakarta Commons/lang/src/java/org/apache/commons/lang	line 643	July 23, 2003 11:22:37 AM 	Unnecessary cast to type int for expression of type char. It is already compatible with the argument type int	Entities.java	Apache Jakarta Commons/lang/src/java/org/apache/commons/lang	line 642	July 23, 2003 11:22:37 AM   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137502 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/214abbce3b19d4ab58caed896b919bee8b469ee1</link>
+    <actions>
+      <action>
+        <pre>((int)ch) &gt; 0x7F</pre>
+        <post>ch &gt; 0x7F</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharUtils.java" id="d9bbb21458555d6ac90667382bbbe9f20338c6d2">
+    <message>Using StringUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137806 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d9bbb21458555d6ac90667382bbbe9f20338c6d2</link>
+    <actions>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="86b7190ce0359acf0d0022c0c81162f2984d7bdc">
+    <message>Update Null handling in StringUtils to handle nulls quietly   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137444 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/86b7190ce0359acf0d0022c0c81162f2984d7bdc</link>
+    <actions>
+      <action>
+        <pre>repeat == 0</pre>
+        <post>repeat &lt;= 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Enum.java" id="5db36decad4ffe41894c81d56021c42f604f31ac">
+    <message>Javadoc fixes and a refactoring to use StringUtils.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137415 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/5db36decad4ffe41894c81d56021c42f604f31ac</link>
+    <actions>
+      <action>
+        <pre>name == null || name.length() == 0</pre>
+        <post>StringUtils.isEmpty(name)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Tokenizer.java" id="d9bbb21458555d6ac90667382bbbe9f20338c6d2">
+    <message>Using StringUtils.isEmpty().   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137806 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d9bbb21458555d6ac90667382bbbe9f20338c6d2</link>
+    <actions>
+      <action>
+        <pre>tok == null || tok.length() == 0</pre>
+        <post>StringUtils.isEmpty(tok)</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="Range.java" id="14c230a5341f5f5e30cce4b674ccb97c38bf409c">
+    <message>Modifying toString method to cache in a thread-safe way per LANG-481  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@900015 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/14c230a5341f5f5e30cce4b674ccb97c38bf409c</link>
+    <actions>
+      <action>
+        <pre>toString == null</pre>
+        <post>result == null</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="FastDateFormat.java" id="2aa9dca994b006ccbfcb528de5ff0da6a5578411">
+    <message>Adjust FastDateFormat for Java 7 behavior regarding format of the year pattern (LANG-719).  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1146138 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2aa9dca994b006ccbfcb528de5ff0da6a5578411</link>
+    <actions>
+      <action>
+        <pre>tokenLen &gt;= 4</pre>
+        <post>tokenLen == 2</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ToStringBuilder.java" id="946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b">
+    <message>Fix infinite recursion in inner classes reflection methods from Per Velschow   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137232 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/946ebd29d9d7380e702f2db64f4cf4b4ca1aed2b</link>
+    <actions>
+      <action>
+        <pre>!Modifier.isStatic(f.getModifiers())</pre>
+        <post>(f.getName().indexOf('$') == -1) &amp;&amp; (useTransients || !Modifier.isTransient(f.getModifiers())) &amp;&amp; (!Modifier.isStatic(f.getModifiers()))</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="c91e9dca2e9ba010ced95d80f15c32efd866ec44">
+    <message>Add append(String, int, int)  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@230902 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c91e9dca2e9ba010ced95d80f15c32efd866ec44</link>
+    <actions>
+      <action>
+        <pre>length &lt; 0</pre>
+        <post>length &lt; 0 || (startIndex + length) &gt; chars.length</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="f4cf865b7c10a52892473eadb1620ab5b78157b4">
+    <message>Optimize the performance of StringUtils.replace bug 36583, from Chris Hyzer  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@279977 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f4cf865b7c10a52892473eadb1620ab5b78157b4</link>
+    <actions>
+      <action>
+        <pre>text == null || isEmpty(repl) || with == null || max == 0</pre>
+        <post>isEmpty(text) || isEmpty(repl) || with == null || max == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="d2b4ea34f7ab380edf95264bd8a32d4174d0ba3f">
+    <message>getCause(Throwable): Added detection of SQLException and its getNextException() method pointed out by Costin M., Paul Jack, and Nicola Ken Barozzi.  They've also suggested some more general patterns which we're discussing the addition of on the commons-dev@jakarta.apache.org list.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@136964 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d2b4ea34f7ab380edf95264bd8a32d4174d0ba3f</link>
+    <actions>
+      <action>
+        <pre>t instanceof NestableRuntimeException</pre>
+        <post>t instanceof SQLException</post>
+      </action>
+      <action>
+        <pre>t instanceof NestableException</pre>
+        <post>t instanceof NestableRuntimeException</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="WordUtils.java" id="4c5231383bec6b0f8728ed96102ee4bbd4d55124">
+    <message>Eat own dog food: Call StringUtils.isEmpty().  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1144925 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4c5231383bec6b0f8728ed96102ee4bbd4d55124</link>
+    <actions>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0</pre>
+        <post>StringUtils.isEmpty(str)</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || delimLen == 0</pre>
+        <post>StringUtils.isEmpty(str) || delimLen == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || delimLen == 0</pre>
+        <post>StringUtils.isEmpty(str) || delimLen == 0</post>
+      </action>
+      <action>
+        <pre>str == null || str.length() == 0 || delimLen == 0</pre>
+        <post>StringUtils.isEmpty(str) || delimLen == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="EnumUtils.java" id="225b739529069a55b77e2d61bc85b39bd76ef909">
+    <message>Don't write parameter  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1573185 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/225b739529069a55b77e2d61bc85b39bd76ef909</link>
+    <actions>
+      <action>
+        <pre>block &lt; values.length &amp;&amp; (values[block] &amp; 1 &lt;&lt; (constant.ordinal() % Long.SIZE)) != 0</pre>
+        <post>block &lt; lvalues.length &amp;&amp; (lvalues[block] &amp; 1 &lt;&lt; (constant.ordinal() % Long.SIZE)) != 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="CharSetUtils.java" id="06b1ed372f66be1c7d932df5ad7dc5f34b3b87ad">
+    <message>Update javadoc to better describe method   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137529 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/06b1ed372f66be1c7d932df5ad7dc5f34b3b87ad</link>
+    <actions>
+      <action>
+        <pre>str == null</pre>
+        <post>str == null || str.length() == 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="f08213cc4c35fd71e98aa5233fcb2db3333793a2">
+    <message>Applying Ilya's patch from LANG-703 fixing an NPE when toString returns null  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1142381 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f08213cc4c35fd71e98aa5233fcb2db3333793a2</link>
+    <actions>
+      <action>
+        <pre>bufSize &lt;= 0</pre>
+        <post>noOfItems &lt;= 0</post>
+      </action>
+      <action>
+        <pre>bufSize &lt;= 0</pre>
+        <post>noOfItems &lt;= 0</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="AnnotationUtils.java" id="ede10b6c6a251f4d5b798fbd6030ae346d7ff94b">
+    <message>retract @Nonbinding support; doesn't seem proper default behavior  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1083849 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ede10b6c6a251f4d5b798fbd6030ae346d7ff94b</link>
+    <actions>
+      <action>
+        <pre>m.getParameterTypes().length == 0 &amp;&amp; isValidAnnotationMemberType(m.getReturnType()) &amp;&amp; !isNonbindingMember(m)</pre>
+        <post>m.getParameterTypes().length == 0 &amp;&amp; isValidAnnotationMemberType(m.getReturnType())</post>
+      </action>
+    </actions>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="84a814fb7c99a5cb3bad6c80932181883f92cacd">
+    <message>Fix PMD issues: "These nested if statements could be combined"  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1153241 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/84a814fb7c99a5cb3bad6c80932181883f92cacd</link>
+    <actions>
+      <action>
+        <pre>ret.charAt(lastIdx - 1) == CharUtils.CR</pre>
+        <post>last == CharUtils.LF &amp;&amp; ret.charAt(lastIdx - 1) == CharUtils.CR</post>
+      </action>
+    </actions>
+  </commitFile>
+</data>

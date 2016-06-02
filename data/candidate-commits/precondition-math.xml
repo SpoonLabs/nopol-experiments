@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+  <commitFile file="BinomialDistribution.java" id="cc4ab51ee9e001a0a999a2a43ad5bd323494b800">
+    <message>Fixed BinomialDistribution to deal with degenerate cases correctly.  JIRA: MATH-1136 Reported and patched by Aleksei Dievskii.    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1609775 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/cc4ab51ee9e001a0a999a2a43ad5bd323494b800</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="AbstractRealMatrix.java" id="bd95671403a7307078ca2ebac2b56886f178c7d0">
+    <message>[MATH-862] Correct fix for matrix dimension check in copySubMatrix.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1459534 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/bd95671403a7307078ca2ebac2b56886f178c7d0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MathUtils.java" id="c5d148896f094d66d8cba33f19100e273362e777">
+    <message>Forced symmetry in binomialCoefficientLog and added test cases for MathUtils. JIRA: MATH-242 Reported and patched by Christian Semrau  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@736288 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c5d148896f094d66d8cba33f19100e273362e777</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="CMAESOptimizer.java" id="0912bac5201d98af64a832766146797a9d75bb6f">
+    <message>MATH-868 MATH-879 "lambda" and "inputSigma" should be passed to "optimize" as arguments of type "OptimizationData". Deprecated constructors. Updated unit tests.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1400108 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/0912bac5201d98af64a832766146797a9d75bb6f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LegendreRuleFactory.java" id="b1741d1b461795f7de1b2ebccd24405fb875dddd">
+    <message>Precondition check.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1374054 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/b1741d1b461795f7de1b2ebccd24405fb875dddd</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="PolygonsSet.java" id="f4c926ea82771de22a32150a8b0b1a502faf34b2">
+    <message>Build properly empty polygons for equal min/max box.  JIRA: MATH-1117  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1590251 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f4c926ea82771de22a32150a8b0b1a502faf34b2</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BaseAbstractScalarOptimizer.java" id="ae42622ff090712ae04edeaab09c523b5b1a0470">
+    <message>MATH-697 Added consistency check on array sizes.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1190665 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ae42622ff090712ae04edeaab09c523b5b1a0470</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BigMatrixImpl.java" id="3cc04c99f0508f478d8f4e7bf5af6031a9bf5cc8">
+    <message>Added Matrix-valued row, column, and subMatrix accessors as suggested by Kim van der Linde (Pr #30897). Implemented equals and hashcode. Modified toString() to handle empty matrix.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141481 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/3cc04c99f0508f478d8f4e7bf5af6031a9bf5cc8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NaturalRanking.java" id="16acabd53f938735aae79bf7428359b68afea88b">
+    <message>[MATH-893] Add new NaNStrategy FAILED, thanks to Patrick Meyer.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1407852 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/16acabd53f938735aae79bf7428359b68afea88b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SchurTransformer.java" id="bda25b40295b13782c488fd94f0abd091da296bd">
+    <message>[MATH-1051] Fix EigenDecomposition for certain non-symmetric matrices.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1537611 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/bda25b40295b13782c488fd94f0abd091da296bd</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MonotoneChain.java" id="de219058597dbdefe93f6e4e935d797a05dc74e4">
+    <message>[MATH-749] Rename method, add/improve javadoc, better handle degenerate cases, improve unit tests.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1565444 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/de219058597dbdefe93f6e4e935d797a05dc74e4</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SecantSolver.java" id="24d837eafd724642faed1b80856a353f73e993c5">
+    <message>Eliminated redundant endpoint function evaluations in BrentSolver, SecantSolver. BZ #35042.  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@179958 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/24d837eafd724642faed1b80856a353f73e993c5</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="AbstractRealMatrix.java" id="cb83dcd4a382740ff4b0556469d68a099ec11c5b">
+    <message>[MATH-862] check for rectangular input arrays in copySubMatrix methods.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1459081 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/cb83dcd4a382740ff4b0556469d68a099ec11c5b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplexSolver.java" id="a6925e3e8af52bbe7d92769e19e6be848f572e67">
+    <message>[MATH-842] Fix Blands rule by applying it also to pivot column selection, add getter/setter for cycle prevention, reduce default cut-off threshold to 1e-10.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1523495 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/a6925e3e8af52bbe7d92769e19e6be848f572e67</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Frequency.java" id="355e29867de8bf9f91661e422c536d98184b3305">
+    <message>Modified addValue(Object) to convert Integers to Longs, completing (hopefully ;-) fix of problem with integral type conversions reported to commons-dev by Jon Langlois.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141449 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/355e29867de8bf9f91661e422c536d98184b3305</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EventState.java" id="f7c0b403d2585912e40b471cf83ac1d72cdd459b">
+    <message>Fixed an error in handling of very close events during ODE integration JIRA: MATH-322  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@887794 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f7c0b403d2585912e40b471cf83ac1d72cdd459b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BrentSolver.java" id="f6dd42b4fc01d1bef5392b6f19b6bcbafee27637">
+    <message>Fixed a missing bracketing check of initial interval in Brent solver JIRA: MATH-343  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@915517 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f6dd42b4fc01d1bef5392b6f19b6bcbafee27637</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastMath.java" id="0900d78b9a6df09bfb354c4002e51450b4788238">
+    <message>Ensure correct sign when toRadians() returns zero [Not needed for toDegrees() as the calculation does not underflow]  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1060959 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/0900d78b9a6df09bfb354c4002e51450b4788238</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="HypergeometricDistributionImpl.java" id="38293084be1aca23754e2cd7db4a8e5181482613">
+    <message>Added consistency checks for constructor parameters.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141220 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/38293084be1aca23754e2cd7db4a8e5181482613</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastMath.java" id="c1d889840c0ca3caf107c0c23c97848be4ee783f">
+    <message>MATH-486 FastMath toRadian and toDegree don't handle large double numbers well  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1060967 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c1d889840c0ca3caf107c0c23c97848be4ee783f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Complex.java" id="2123f7805b1b7aa7f6651f96342e7ef188ff763e">
+    <message>Fixed add method to match javadoc contract when one or both addends has NaN parts.  JIRA: MATH-618 Reported by Arne Plose  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1146573 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/2123f7805b1b7aa7f6651f96342e7ef188ff763e</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BigFraction.java" id="3553ded10bd1518fd9cc023183e40a2cf44cc6f2">
+    <message>BigFraction.divide(BigFraction) now throws MathArithmeticException (see MATH-755).  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1294027 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/3553ded10bd1518fd9cc023183e40a2cf44cc6f2</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Variance.java" id="55a1e448c20983e29050505a862ea14967833b75">
+    <message>Added support for population variance computation.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141466 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/55a1e448c20983e29050505a862ea14967833b75</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MicrosphereInterpolatingFunction.java" id="a28aac9aa8e7288673200c10f33184455937f298">
+    <message>MATH-488 Removed occurrences of "MathException" in multidimensional interpolator. Replaced "DimensionMismatchException" by its unchecked equivalent (MATH-491). [I forgot to make those changes as part of MATH-458.] Fixed Javadoc.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1061790 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/a28aac9aa8e7288673200c10f33184455937f298</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastFourierTransformer.java" id="cfe3c4c81435a306be4b66a580823642972dc5f8">
+    <message>Inlined   - transform.FastFourierTransformer.verifyDataSet(double[])   - transform.FastFourierTransformer.verifyDataSet(Object[]) to improve readability.  Related to MATH-677.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1227470 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/cfe3c4c81435a306be4b66a580823642972dc5f8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StepNormalizer.java" id="60f99d976da2bf63732543348c443f9d0d010c01">
+    <message>Prevent step normalizer to output twice the last point in MULTIPLES mode.  JIRA: MATH-603  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1144902 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/60f99d976da2bf63732543348c443f9d0d010c01</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MathIllegalArgumentException.java" id="f6fd0430728b75fce8afc3d369c49a57ac84015a">
+    <message>MATH-361. Added a check to avoid triggering a "NullPointerException" if the argument list is "null". Added unit tests.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@958551 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f6fd0430728b75fce8afc3d369c49a57ac84015a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BrentSolver.java" id="24d837eafd724642faed1b80856a353f73e993c5">
+    <message>Eliminated redundant endpoint function evaluations in BrentSolver, SecantSolver. BZ #35042.  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@179958 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/24d837eafd724642faed1b80856a353f73e993c5</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ProperFractionFormat.java" id="9ebfb870a2edb2fbf2741928efc53c2deb352e90">
+    <message>Modified ProperFractionFormat to reject embedded minus signs. JIRA: MATH-60 Reported by Nhung Nnguyen   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@411647 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9ebfb870a2edb2fbf2741928efc53c2deb352e90</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SubLine.java" id="d270055e874148a2742604be36ab977eec030fba">
+    <message>Fixed NullPointerException in 2D and 3D sub-line intersections.  Patch contributed by Andeas Huber.  JIRA: MATH-988  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1488866 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/d270055e874148a2742604be36ab977eec030fba</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RealMatrixImpl.java" id="eccc4d88780630da1c1415599345cca3c28888ea">
+    <message>PR: http://nagoya.apache.org/bugzilla/show_bug.cgi?id=21005 Submitted by:	phil@steitz.com   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@140949 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/eccc4d88780630da1c1415599345cca3c28888ea</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MathUtils.java" id="e4886c0a39944ba9fb7a2175cb2d1026747910e1">
+    <message>Fixed error in factorial accuracy.  JIRA: MATH-240.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@735781 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/e4886c0a39944ba9fb7a2175cb2d1026747910e1</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SubLine.java" id="d270055e874148a2742604be36ab977eec030fba">
+    <message>Fixed NullPointerException in 2D and 3D sub-line intersections.  Patch contributed by Andeas Huber.  JIRA: MATH-988  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1488866 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/d270055e874148a2742604be36ab977eec030fba</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SparseFieldVector.java" id="1c032ee45483926f8f539457c342ba33dc1a8cb9">
+    <message>  - Populated throws clause of FieldVector, ArrayFieldVector, SparseFieldVector (MATH-854).   - Added some missing precondition checks.   - Corrected some mistakes in javadoc.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1384654 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/1c032ee45483926f8f539457c342ba33dc1a8cb9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BaseAbstractScalarOptimizer.java" id="d8e1809529ef78737dbbe4080622330970866793">
+    <message>MATH-697 Fixed bug in check that the initial value is within bounds.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1194874 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/d8e1809529ef78737dbbe4080622330970866793</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Frequency.java" id="9ffd5866c4dfcf8cb435e03f8bd2e57dbf3221f4">
+    <message>Fixed error computing cumulative frequencies when actual parameter is an Integer.  Reported to commons-dev list by Jon Langlois.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141445 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9ffd5866c4dfcf8cb435e03f8bd2e57dbf3221f4</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimpleVectorValueChecker.java" id="8da1dede2432607b2dff6fb09bb1dfbe23779da9">
+    <message>MATH-902 Added a constructor in the custom checkers that enables normal termination of an optimization algorithm (i.e. returning the curent best point after a selected number of iterations have been performed).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1411807 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8da1dede2432607b2dff6fb09bb1dfbe23779da9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Complex.java" id="95d15eff45cfcf40871d950c8ffecba2d95d63f9">
+    <message>Introduced tests to guard against overflow (MATH-722). Corrected Javadoc and updated unit tests accordingly.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1236548 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/95d15eff45cfcf40871d950c8ffecba2d95d63f9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="GaussNewtonOptimizer.java" id="c76d918c77f21176df0acd613d936aa3f3866acb">
+    <message>Replaced reference to DecompositionSolver.solve(double[]) by DecompositionSolver.solve(RealVector) (see MATH-653)  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1164615 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c76d918c77f21176df0acd613d936aa3f3866acb</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Pair.java" id="e75e686431b7ed08de78c5b53d55dd33ff423ef9">
+    <message>Shortcut checks for identical objects  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1336985 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/e75e686431b7ed08de78c5b53d55dd33ff423ef9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="IterationManager.java" id="692c542c5e3038ec9edc5a05ca6ea7c4d2f070ff">
+    <message>Reverted changes committed in r1353140. In o.a.c.m3.util.Incrementor, a NullPointerException is now thrown if the call-back function specified at construction is null. o.a.c.m3.util.IterationManager was updated accordingly (used to explicitely use the constructor with null argument).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1353386 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/692c542c5e3038ec9edc5a05ca6ea7c4d2f070ff</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastMath.java" id="9f30f389807157eb96591cf05a6fbe1362ede7be">
+    <message>fixed behavior of nextAfter(double, double) for infinity, added nextAfter(float, float) and nextUp(float) JIRA: MATH-478  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1061551 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9f30f389807157eb96591cf05a6fbe1362ede7be</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Beta.java" id="0810e249acb6be925e4ddb3172707928d94fa88f">
+    <message>fix for wrong results and stack overflow error from BivariateRegression PR: http://nagoya.apache.org/bugzilla/show_bug.cgi?id=24747 Obtained from: Submitted by:	Sergei Skarupo, Brent Worden  Reviewed by:	Mark Diggory   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141034 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/0810e249acb6be925e4ddb3172707928d94fa88f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimpleRegression.java" id="81821bc466a21810dd0e72114e23c358e12aa3be">
+    <message>JIRA: MATH-607 Adding support for UpdatingMultipleLinearRegression to SimpleRegression  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1174509 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/81821bc466a21810dd0e72114e23c358e12aa3be</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NordsieckStepInterpolator.java" id="935eec022d9f1a432dab9be59b311d426a24a5a6">
+    <message>compute state variation avoiding cancellation in a critical subtraction to preserve accuracy  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@791248 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/935eec022d9f1a432dab9be59b311d426a24a5a6</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimpleUnivariateValueChecker.java" id="ec46f40b0be95ff28b07204a5304de8e5262aef1">
+    <message>MATH-902 Allow stopping condition based on the number of iterations (for "univariate" optimizers).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1413171 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ec46f40b0be95ff28b07204a5304de8e5262aef1</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplePointChecker.java" id="8da1dede2432607b2dff6fb09bb1dfbe23779da9">
+    <message>MATH-902 Added a constructor in the custom checkers that enables normal termination of an optimization algorithm (i.e. returning the curent best point after a selected number of iterations have been performed).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1411807 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8da1dede2432607b2dff6fb09bb1dfbe23779da9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MatrixUtils.java" id="514f67b19b3f3128fc08b85df391c5d9f01ea8b0">
+    <message>fixed missing dimension checks  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@766873 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/514f67b19b3f3128fc08b85df391c5d9f01ea8b0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Gamma.java" id="e626217e4dea6c99e2fd6e139e9d060cfacc9db8">
+    <message>PR: 29419 Added an implementation of regularized gamma function, Q(a, x) = 1 - P(a,x), based on a continued fraction.  This converges much faster for the large x case.  I added the example submitted by Scott as a test case and ran all the test cases with everything passing.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141286 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/e626217e4dea6c99e2fd6e139e9d060cfacc9db8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Complex.java" id="7c7b56e9f31bf38bdbde893ec6e7cd511f29101c">
+    <message>MATH-164 add a special handling for multiplication of complex numbers with infinite parts  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@610288 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/7c7b56e9f31bf38bdbde893ec6e7cd511f29101c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="PolyhedronsSet.java" id="2a6c6409a919c1091ef3af778cc9738c57d67575">
+    <message>Build empty polyhedrons set when given equal min/max boundaries.  Also explained better in the javadoc about some wrong usage of PolyhedronsSet constructor.  JIRA: MATH-1115  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1590254 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/2a6c6409a919c1091ef3af778cc9738c57d67575</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="GeneticAlgorithm.java" id="6460cd272a4c0605c1e9167f641930bba16715ba">
+    <message>Eliminated the "mutation requirement" in nextGeneration method. Added algorithm description in javadoc. JIRA: MATH-207 Reported and patched by David Stefka     git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/branches/MATH_2_0@699704 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/6460cd272a4c0605c1e9167f641930bba16715ba</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ValueServer.java" id="0152e67e9eb57de2da0df28f396c9e36cd6e12c4">
+    <message>throw EOFException when using empty files with ValueServer in replay and digest modes JIRA: MATH-185  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@617850 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/0152e67e9eb57de2da0df28f396c9e36cd6e12c4</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastSineTransformer.java" id="cfe3c4c81435a306be4b66a580823642972dc5f8">
+    <message>Inlined   - transform.FastFourierTransformer.verifyDataSet(double[])   - transform.FastFourierTransformer.verifyDataSet(Object[]) to improve readability.  Related to MATH-677.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1227470 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/cfe3c4c81435a306be4b66a580823642972dc5f8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Gamma.java" id="fec77409580f1f1608b881a5add07ca16d081de0">
+    <message>MATH-849: Gamma.gamma(double) returns NaN if called on negative integer.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1413802 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/fec77409580f1f1608b881a5add07ca16d081de0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplexSolver.java" id="fa027a4685bacd9e32b3bc7d875717b4457f6829">
+    <message>[MATH-1082] Improve cutOff mechanism in SimplexSolver, adapt unit tests.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1552792 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/fa027a4685bacd9e32b3bc7d875717b4457f6829</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="OneWayAnovaImpl.java" id="bd92c7300934b4d4e95eb7ae99ed623237807860">
+    <message>Fixed exceptions for OneWayAnova interface and impl, removed never thrown MathException. JIRA: MATH-488 MATH-459  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1240310 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/bd92c7300934b4d4e95eb7ae99ed623237807860</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FuzzyKMeansClusterer.java" id="596ccd59a11ad5e9fda19ccd0f4fc714d8d3394d">
+    <message>[MATH-1165] Fix FuzzyKMeansClusterer when data points equal a cluster center. Thanks to Pashutan Modaresi </message>
+    <link>https://github.com/apache/commons-math/commit/596ccd59a11ad5e9fda19ccd0f4fc714d8d3394d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="PolynomialFunction.java" id="f41527455cc9220383e7eb8eeca0caa369e1f104">
+    <message>Added degree() method, degree checking in derivative computations, made constructor copy coefficient array, cleaned up javadoc.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141102 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f41527455cc9220383e7eb8eeca0caa369e1f104</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MathUtils.java" id="1ae0c809503336c2acea20581af782c560148ec0">
+    <message>Fixed null handling in varargs for sortInPlace, improved javadoc, addeed tests.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1180314 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/1ae0c809503336c2acea20581af782c560148ec0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="OpenMapRealMatrix.java" id="5e6389761c6575f815a5ac91a22c4ecc48596729">
+    <message>Fixed an integer overflow in OpenMapRealMatrix.  JIRA: MATH-679  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1181181 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/5e6389761c6575f815a5ac91a22c4ecc48596729</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EmbeddedRungeKuttaIntegrator.java" id="d277738885e78a9339f12ebf10c3c26eb538c1cf">
+    <message>Check first step size in embedded Runge-Kutta integrators.  JIRA: MATH-727  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1215524 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/d277738885e78a9339f12ebf10c3c26eb538c1cf</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EmpiricalDistributionImpl.java" id="0152e67e9eb57de2da0df28f396c9e36cd6e12c4">
+    <message>throw EOFException when using empty files with ValueServer in replay and digest modes JIRA: MATH-185  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@617850 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/0152e67e9eb57de2da0df28f396c9e36cd6e12c4</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastMath.java" id="a3f6c210e341c24f721f1d4eba7b7a2ad1d91661">
+    <message>fixed scalb for very large powers  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1062928 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/a3f6c210e341c24f721f1d4eba7b7a2ad1d91661</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MathArrays.java" id="91d280b7300b0f601cd76a880c26784a822f96b8">
+    <message>MATH-1005 Array of length 1 must be handled as a special case.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1502516 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/91d280b7300b0f601cd76a880c26784a822f96b8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="IntervalsSet.java" id="ac8ff245097c97c79fcfd4792ee8a56797c5a2ef">
+    <message>avoid division by zero when dealing with single-point intervals sets  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1328959 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ac8ff245097c97c79fcfd4792ee8a56797c5a2ef</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EventState.java" id="77cd728359169c5d69c9f452391c3a03bf8be55d">
+    <message>improved robustness in case of events just at integration start  When an event occurs exactly at integration start, the first truncated steps ends up with zero size. This induced problems with forward/backward sensing based on this step alone. This also induced an infinite loop in the calling integrators.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/branches/MATH_2_0@676610 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/77cd728359169c5d69c9f452391c3a03bf8be55d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DSCompiler.java" id="8bac3361f2aaab7f2086e04f8ae03a973d521915">
+    <message>Fixed too large memory consumption in DSCompiler.  Prior to this correction, when at one point in a program a user needed a derivative with 1 parameter and order 5, and at another point needed a derivative with 30 parameters and order 1, all DSCompilers from 1x1 to 30x5 were created. As the compilation rules for 30 parameters and 5 order are huge, this failed with memory heap errors after several gigabytes were consumed.  The fix is to simply build the necessary compilers, and let the array contain null references for the compilers never used (these null references will be populated later if the user ask for some intermediate value that need them, of course).  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1384905 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8bac3361f2aaab7f2086e04f8ae03a973d521915</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RealVector.java" id="5e5cb5ec2fefdcd469cfdec9197746acdec46149">
+    <message>MATH-795: In org.apache.commons.math3.linear.RealVectorAbstractTest   - factored out unit tests of RealVector RealVector.set(double),   - created unit tests of double[] RealVector.toArray(),   - factored out unit tests of RealVector RealVector.unitVector(),   - factored out unit tests of void RealVector.unitize(),   - created unit tests of Iterator&lt;RealVector.Entry&gt; RealVector.iterator().  In org.apache.commons.math3.linear.ArrayRealVector, removed unnecessary overrides of unitVector() and unitize().  In org.apache.commons.math3.linear.RealVector   - unitVector() and unitize() now throw an ArithmeticException when the norm is 0 (as specified in the Javadoc),   - the returned iterator() returns NoSuchElementException as specified in the general contract of iterators.    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1354822 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/5e5cb5ec2fefdcd469cfdec9197746acdec46149</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ArrayFieldVector.java" id="5998035a9fafcfb68ffbdc33551b8ed41ab14d4e">
+    <message>MATH-854: fill the "throws" clause of ArrayFieldVector.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1383052 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/5998035a9fafcfb68ffbdc33551b8ed41ab14d4e</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ComplexUtils.java" id="b494c9f537f62c37d857909deb32cd1d043aa9c5">
+    <message>Fix complex square root for zero (#36266) Contributed by: Xiaogang Zhang   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@239949 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/b494c9f537f62c37d857909deb32cd1d043aa9c5</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MultiDirectional.java" id="8fe6a83eb60b7b16cac065b68e60c637d64d5932">
+    <message>Prevent infinite loops in multi-directional direct optimization method when the start point is exactly at the optimal point JIRA: MATH-283  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@804328 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8fe6a83eb60b7b16cac065b68e60c637d64d5932</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LegendreHighPrecisionRuleFactory.java" id="b1741d1b461795f7de1b2ebccd24405fb875dddd">
+    <message>Precondition check.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1374054 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/b1741d1b461795f7de1b2ebccd24405fb875dddd</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="GraggBulirschStoerStepInterpolator.java" id="df6766e1e3a569163b52dbda8e7cfbc2998e3742">
+    <message>prevent zero-length steps from generating NaN  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/branches/MATH_2_0@675578 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/df6766e1e3a569163b52dbda8e7cfbc2998e3742</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ComplexFormat.java" id="9459e748c874f7fd43c90ea6f90bce35d47ca778">
+    <message>ComplexFormat now handles situations where either the real or  imaginary part is NaN, POSITIVE_INFINITY, or NEGATIVE_INFINITY. Three new tests were added to address these situations. PR: Obtained from: Submitted by:	 Reviewed by:	 CVS: ---------------------------------------------------------------------- CVS: PR: CVS:   If this change addresses a PR in the problem report tracking CVS:   database, then enter the PR number(s) here. CVS: Obtained from: CVS:   If this change has been taken from another system, such as NCSA, CVS:   then name the system in this line, otherwise delete it. CVS: Submitted by: CVS:   If this code has been contributed to Apache by someone else; i.e., CVS:   they sent us a patch or a new module, then include their name/email CVS:   address here. If this is your work then delete this line. CVS: Reviewed by: CVS:   If we are doing pre-commit code reviews and someone else has CVS:   reviewed your changes, include their name(s) here. CVS:   If you have not had it reviewed then delete this line.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141237 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9459e748c874f7fd43c90ea6f90bce35d47ca778</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SparseRealVector.java" id="9b4adf4df94f8cfaf66d389cb2617c7036959fdc">
+    <message>fixed an error in SparseRealVector.isInfinite, NaN was not checked beforehand fixed an error in SparseRealVector.hashcode, code did not depend on vector entries fixed tests accordingly  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@766337 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9b4adf4df94f8cfaf66d389cb2617c7036959fdc</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Precision.java" id="8e5867eda8328e4cb2e103d098d0c9f3c2fab50e">
+    <message>[MATH-1070] Fix Precision.round(float, int, int) for RoundingMode ROUND_UP. Thanks to  Oleksandr Muliarevych.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1547649 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8e5867eda8328e4cb2e103d098d0c9f3c2fab50e</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Dfp.java" id="ec6dbad43a1f82f61ec6dbd43fd7766e92762e52">
+    <message>Fixed conversion problems to/from 0 in Decimal Floating Point (Dfp) class.  JIRA: MATH-567  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1099938 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ec6dbad43a1f82f61ec6dbd43fd7766e92762e52</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplexTableau.java" id="f656676e3a9a9611c368d1da462ed0ce5c93308d">
+    <message>Fixed case of unconstrained variables that still occur in the objective function in simplex solver.  Patch provided by Thomas Neidhart  Jira: MATH-713  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1207566 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f656676e3a9a9611c368d1da462ed0ce5c93308d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Frequency.java" id="3de23df528e4b027c20d0634d5083d560bd98913">
+    <message>Fixed error in getCumFreq (use custom comparator when one is supplied). Removed tabs.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141118 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/3de23df528e4b027c20d0634d5083d560bd98913</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="a5c011a6403106d779b643aa2bf318f6ce6fba75">
+    <message>Changed Fraction(double) to correctly handle near-integral arguments. PR # 35434 Submitted by: JÃ¶rg Weimar   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@201813 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/a5c011a6403106d779b643aa2bf318f6ce6fba75</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="WelzlEncloser.java" id="2a3b56daa03253a8abccf5d895a310831ef0275a">
+    <message>Added tests for 3D smallest ball enclosing.  WARNING! These tests have revealed a bug in our implementation of the smallest enclosing ball algorithm. So some tests are currently ignored in order to avoid having lots of messages, but I am already working on them. The problems should be fixed (and the tests activated) before 3.3 release.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1562573 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/2a3b56daa03253a8abccf5d895a310831ef0275a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="PolynomialSplineFunction.java" id="ee310159d9742bed3c1064e17a1eafd0441be374">
+    <message>PR: 34230 Fixed bug in PolynomialSplineFunction to allow evaluation of the function at the last knot point.  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@159727 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ee310159d9742bed3c1064e17a1eafd0441be374</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EigenDecompositionImpl.java" id="9a324dc5463ea6329e0b2e59bb46073117d68168">
+    <message>fixed some NaN appearing in eigenvectors when null pivots occurred in dstqds or dqds algorithms this is a partial fix for MATH-297 but not a complete one as for example computing the eigendecomposition if identity leads to three times the same vector ... JIRA: MATH-297  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@885268 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/9a324dc5463ea6329e0b2e59bb46073117d68168</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RealMatrixImpl.java" id="4fe1f135a368aa3ad0cf57dc9e97e474c86954da">
+    <message>Formatting, javadoc, plus fix for toString to handle empty matrix.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141464 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/4fe1f135a368aa3ad0cf57dc9e97e474c86954da</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BrentSolver.java" id="57c45aca3df1cca64fcbe8f60803302a8f454a8b">
+    <message>Fixed too stringent interval check in Brent solver: initial guess is now allowed to be at either interval end JIRA: MATH-347  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@917668 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/57c45aca3df1cca64fcbe8f60803302a8f454a8b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MessageFactory.java" id="318d66e1b170a3b57d54d7175cfb3e495f6d7fda">
+    <message>allow either specific or generic formats to be null  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1035009 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/318d66e1b170a3b57d54d7175cfb3e495f6d7fda</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EigenDecompositionImpl.java" id="05361c5a3409a9ca8e4e3438eb87d1cd55b713a8">
+    <message>MATH-432 fixed  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@912413 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/05361c5a3409a9ca8e4e3438eb87d1cd55b713a8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BicubicSplineInterpolatingFunction.java" id="792839b464bc3df40f773147b7694b761cf23b5a">
+    <message>MATH-1134 Flag to request initialization of the internal data needed to call the partial derivatives methods.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1607434 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/792839b464bc3df40f773147b7694b761cf23b5a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LevenbergMarquardtOptimizer.java" id="24218a5278ca3d99c209efc990d16048e29c8536">
+    <message>Fixed Levenberg-Marquardt optimizer that did not use the vectorial convergence checker. Now this optimizer can use either the general vectorial convergence checker or its own specialized convergence settings. Minor changes had to be introduced in the test data, they have been validated JIRA: MATH-362   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@949433 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/24218a5278ca3d99c209efc990d16048e29c8536</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplexSolver.java" id="881a4ee8db1e1826b749579d2284ace982c953ca">
+    <message>[MATH-1079] Further improvements to SimplexSolver.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1552046 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/881a4ee8db1e1826b749579d2284ace982c953ca</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="PolynomialSplineFunction.java" id="c82f497b9abd8ca3b94b1679ae571fe949686bcd">
+    <message>Fixed a TODO by addid a isStrictlyIncreasing method.  This can be refactored later into a more reusable location.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141183 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c82f497b9abd8ca3b94b1679ae571fe949686bcd</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BaseSecantSolver.java" id="c0b4954297ce01b64487c09a1dcfcc0124f7053b">
+    <message>MATH-631 Early detection of "Regula Falsi" algorithm being stuck due to finite precision. Javadoc makes it clear that either the Pegasus or the Illinois solver should be preferred over the Regula Falsi one (due to D. Hendriks).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1164474 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c0b4954297ce01b64487c09a1dcfcc0124f7053b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Frequency.java" id="61c175d0efade12b6bc18892028e881ddfb15e58">
+    <message>Fixed two errors reported on commons-user / commons-dev: 1. addValue(object) and getXxx methods failing or returning incorrect results for Integer arguments when the freq table is not empty 2. getXxx methods failing / returning inconsistent values when invoked on an empty table.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/math/trunk@141420 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/61c175d0efade12b6bc18892028e881ddfb15e58</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="f967b359e72d5ac7bd5ef672963ec39c6db6c79b">
+    <message>Made numerator and denominator final in Fraction and deprecated protected real and imaginary parts fields in Complex, making Fraction immutable and preparing Complex to become fully immutable in 2.0. JIRA: MATH-188 Reported and patched by Sebastian Bazley   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@620373 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f967b359e72d5ac7bd5ef672963ec39c6db6c79b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimplexTableau.java" id="ed813abf79e11a2c7ab7f2368acf8f3174db80e5">
+    <message>Fixed a problem when setting some variables (several variables were set instead of only one) JIRA: MATH-272  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@781135 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/ed813abf79e11a2c7ab7f2368acf8f3174db80e5</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RealMatrixImpl.java" id="24763714084204f277b9d9f53e04c1144861ee1a">
+    <message>fixed missing error checks  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@724187 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/24763714084204f277b9d9f53e04c1144861ee1a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Erf.java" id="c96c12f79769c006f97307c85a9fa95b51e1f32a">
+    <message>* Added erfc * Top-coded both erf and erfc to return extreme values when true values   are indistinguishable from extrema * Added tests against reference data JIRA: MATH-465, MATH-364   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1054184 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c96c12f79769c006f97307c85a9fa95b51e1f32a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ArrayFieldVector.java" id="1ec00befad424a8f340f73da32b8dae3581c2b18">
+    <message>allow zero length vectors JIRA: MATH-391  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1003994 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/1ec00befad424a8f340f73da32b8dae3581c2b18</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EigenDecomposition.java" id="f20ae062d38133e09679104c1e38857a080997c1">
+    <message>[MATH-235] Added a hasComplexEigenvalues method.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1364783 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f20ae062d38133e09679104c1e38857a080997c1</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SimpleValueChecker.java" id="8da1dede2432607b2dff6fb09bb1dfbe23779da9">
+    <message>MATH-902 Added a constructor in the custom checkers that enables normal termination of an optimization algorithm (i.e. returning the curent best point after a selected number of iterations have been performed).   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1411807 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/8da1dede2432607b2dff6fb09bb1dfbe23779da9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="SummaryStatistics.java" id="f18c6b1affed026d32bd380526526e4b411f265b">
+    <message>Added getSumOfLogs method to SummaryStatistics and made sum of logs instance used by GeometricMean configurable. JIRA: MATH-191   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@620221 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/f18c6b1affed026d32bd380526526e4b411f265b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastMath.java" id="81ba9842e5d85aca7bc7b26b01626407899654ac">
+    <message>MATH-489 Fix overflows in acos calculation  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1061609 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/81ba9842e5d85aca7bc7b26b01626407899654ac</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="KMeansPlusPlusClusterer.java" id="c83a4bc0c40e0aa4ee3607e779b96091bf3ba2f5">
+    <message>Added a consistency check for number of points with respect to the number of clusters in Kmeans++ clustering  JIRA: MATH-436  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1084577 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-math/commit/c83a4bc0c40e0aa4ee3607e779b96091bf3ba2f5</link>
+    <actions/>
+  </commitFile>
+</data>

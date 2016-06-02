@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+  <commitFile file="StrBuilder.java" id="dc70a4bbfba18aa966a368a5568745d75b863dec">
+    <message>[Bug 35966] - [lang] StrBuilderTest#testReplaceStringString fails. From Nathan Beyer nbeyer@kc.rr.com.  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@226922 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dc70a4bbfba18aa966a368a5568745d75b863dec</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="2f435baa687274dac335ed00aa943f2d35bbf9a2">
+    <message>Bugzilla Bug 30815 ArrayUtils.isEquals() throws ClassCastException when array1 and array2 are different dimension http://issues.apache.org/bugzilla/show_bug.cgi?id=30815   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137898 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2f435baa687274dac335ed00aa943f2d35bbf9a2</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LookupTranslator.java" id="300f4dcd0b94a76ddc6145ca6e1e780ee418223d">
+    <message>varargs  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1091095 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/300f4dcd0b94a76ddc6145ca6e1e780ee418223d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="HashCodeBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="AnnotationUtils.java" id="eb492c32a43e243a1f3f360aef7d4d53a22af10a">
+    <message>address the invalidity of null annotation members  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1073995 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/eb492c32a43e243a1f3f360aef7d4d53a22af10a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="8d662b14f156d7b2f757f790f1a7183163e145c7">
+    <message>Add new methods stripToNull/stripToEmpty to provide alternative to trim versions   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137462 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8d662b14f156d7b2f757f790f1a7183163e145c7</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RandomStringUtils.java" id="11a540bcf9dcf08b238917e4fd0fb843c34f1f56">
+    <message>Patch for RandomString bug in which counts of 0 or negative counts would cause array exceptions.  Submitted by:	ville.skytta@iki.fi (Ville Skytt?)   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137289 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/11a540bcf9dcf08b238917e4fd0fb843c34f1f56</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ToStringStyle.java" id="b0be90e86c346b320f52ad7b7065f110a7e1d272">
+    <message>Fix bug 16676: StackOverflow due to ToStringBuilder (http://issues.apache.org/bugzilla/show_bug.cgi?id=16676)   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137276 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/b0be90e86c346b320f52ad7b7065f110a7e1d272</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Enum.java" id="f44af42ede37938ca710297cff9f14afa9e3c04d">
+    <message>Fixing the lack of ClassLoader consideration in the compareTo methods of enum.Enum and enums.Enum, along with unit tests, as mentioned on Bugzilla entry #32619 by Kathy Van Stone.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@398812 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f44af42ede37938ca710297cff9f14afa9e3c04d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="37c66d1c8b405e3fbd7e9a78e6b5b8ccf223426f">
+    <message>merge ClassUtils isAssignable w/ autoboxing from LANG_POST_2_4 branch  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@653907 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/37c66d1c8b405e3fbd7e9a78e6b5b8ccf223426f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="f8560117a7955d701cac509f784eb396e4343b7f">
+    <message>Handle JDK1.2/JDK1.3 bug in String.indexOf   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137512 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f8560117a7955d701cac509f784eb396e4343b7f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="ed2a8da1bf10db5cb3c7701b60accd0165dc2e10">
+    <message>Document and fix fraction reduction  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@279983 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ed2a8da1bf10db5cb3c7701b60accd0165dc2e10</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Entities.java" id="4a61fc6cd03fb84171c9f21bce5f627b3a5e6fff">
+    <message>Fixing issue #38569  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@394875 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4a61fc6cd03fb84171c9f21bce5f627b3a5e6fff</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumericEntityUnescaper.java" id="0b3a8a3128890f710700d04e38df48b883d11d91">
+    <message>Adding tests and resolving LANG-710, reported by Benjamin Valentin. Note that this changed such that the code will now escape an unfinished entity (i.e. &amp;#030). This matches browser behaviour.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1142389 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0b3a8a3128890f710700d04e38df48b883d11d91</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DefaultExceptionContext.java" id="0a720fba4c755b97ce33c6372c6d50ef39d2963e">
+    <message>Fix failing unit test of Contexted(Runtime)Exception, adjust formatted message.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@802569 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0a720fba4c755b97ce33c6372c6d50ef39d2963e</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="0ac772a4e3b07287c435fdc3c812f67277c85cc8">
+    <message>[LANG-380]  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@599500 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0ac772a4e3b07287c435fdc3c812f67277c85cc8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DurationFormatUtils.java" id="7eb3a91d1f0e2f3c6498d943cbf128fc709e4339">
+    <message>LANG-1003: DurationFormatUtils are not able to handle negative durations/periods. Reported by Michael Osipov.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1591840 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/7eb3a91d1f0e2f3c6498d943cbf128fc709e4339</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="132b060527622e6100a18c276095694883921449">
+    <message>Rewrite to avoid (im)possible NPE warning  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1478506 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/132b060527622e6100a18c276095694883921449</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ToStringStyle.java" id="34aa8b03da6bf8ad9c605cc833f215519691e4aa">
+    <message>PR: http://issues.apache.org/bugzilla/show_bug.cgi?id=27876 [lang] ReflectionToStringBuilder.toString(null) throws exception by design ReflectionToStringBuilder.toString is now null-safe and returns the style's nullText. ToStringBuilder constructors are now null-safe. A new ToStringBuilder on a null followed by a call to toString returns "".   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137857 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/34aa8b03da6bf8ad9c605cc833f215519691e4aa</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringEscapeUtils.java" id="916639bda234a8e5a030361c4068667764b34cb7">
+    <message>(LANG-421) StringEscapeUtils.escapeJava(String) escapes '/' characters  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@643953 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/916639bda234a8e5a030361c4068667764b34cb7</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="8b648e0f32fcd99f81b5a781eece2c54b9b50627">
+    <message>Fixing -1/1 bug as per #37661  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@383487 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8b648e0f32fcd99f81b5a781eece2c54b9b50627</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="457c8da8cabb280293f91544772eea0f091749c1">
+    <message>Applying my patch from LANG-469 - adding a lastOrdinalIndexOf method to complement the existing ordinalIndexOf method  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@891142 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/457c8da8cabb280293f91544772eea0f091749c1</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="WordUtils.java" id="d95fcd8e24568b4f9d3cb9da922a4029e293c793">
+    <message>Applying Vincent Behar's second patch for LANG-419 - fixing a bug in abbreviate such that lower limits greater than the length of the string weren't working correctly  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@655246 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d95fcd8e24568b4f9d3cb9da922a4029e293c793</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LocaleUtils.java" id="ae2ed3e1595276c5e84e52f3193a7256fffb3b0c">
+    <message>LANG-941: Test failure in LocaleUtilsTest when building with JDK 8 - make problem more explicit by checking for empty strings  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1555040 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ae2ed3e1595276c5e84e52f3193a7256fffb3b0c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Entities.java" id="dd2ae757d12554f290931f0b3c05e33ad993ecd1">
+    <message>Applying Alexander Kjall's patch from LANG-480; along with a unit test made from his example. Fixes unicode conversion above U+00FFFF being done into 2 characters  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@749095 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dd2ae757d12554f290931f0b3c05e33ad993ecd1</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="2c9c8753165dc7ce5dd1d5a6d741b445b33302c2">
+    <message>LANG-693 Method createNumber from NumberUtils doesn't work for floating point numbers other than Float  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1484263 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2c9c8753165dc7ce5dd1d5a6d741b445b33302c2</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="cb40e35f5e0990fad4c5278964fcc24e112dde8c">
+    <message>Applying fix for LANG-552. StringUtils.replaceEach(String, String[], String[]) no longer NPEs when null appears in the last String[]  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@890212 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/cb40e35f5e0990fad4c5278964fcc24e112dde8c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Entities.java" id="ffa8800006c2a0e9f8ab498647bb8efcffdffea0">
+    <message>Fix unescape to handle invalid entities bug 29149, from Dan Goldberg   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137988 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ffa8800006c2a0e9f8ab498647bb8efcffdffea0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumericEntityUnescaper.java" id="3e1afecc200d7e3be9537c95b7cf52a7c5031300">
+    <message>Adding a test, and code fix, to have supplementary chars working in numeric entity unescaping. See LANG-617  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@956787 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3e1afecc200d7e3be9537c95b7cf52a7c5031300</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Range.java" id="48bf241d4149919e0928e39616bee2e3783e2987">
+    <message>Adding hashCode caching in line with LANG-481  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@899897 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/48bf241d4149919e0928e39616bee2e3783e2987</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Entities.java" id="c488d3996975aa24763a4b8c507756db8073738d">
+    <message>Applying optimisation from LANG-287. Thanks to Stepan Koltsov and Holger Hoffstatte.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@467467 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c488d3996975aa24763a4b8c507756db8073738d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="MethodUtils.java" id="1a6b33077c93f5d901788c6cc0df8eca89cc45c3">
+    <message>Updated method utils with latest code from the beanutils version.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137124 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1a6b33077c93f5d901788c6cc0df8eca89cc45c3</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="4c3f8ab1283ab41d43fd50a70436425788973bdf">
+    <message>Bug #20652 fixed.  Submitted by:	Fredrik Westermarck   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137370 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4c3f8ab1283ab41d43fd50a70436425788973bdf</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="e71f6dd3f2f70c640ae73d28b432b3a69ffcab4b">
+    <message>LANG-822: NumberUtils#createNumber - bad behaviour for leading "--"   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1407973 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e71f6dd3f2f70c640ae73d28b432b3a69ffcab4b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Enum.java" id="55216d0c59a1d680969db821d28492293b470b8b">
+    <message>Fix Enum equals to work correctly by reflection bug 28180, from Matthias Eichel   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137837 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/55216d0c59a1d680969db821d28492293b470b8b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="CharSet.java" id="0da950654112a5185e2601bf44be2b6ffb17c169">
+    <message>Fix CharSetUtils to not throw NPE all the time   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137538 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0da950654112a5185e2601bf44be2b6ffb17c169</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ReflectionToStringBuilder.java" id="e6b7d55ebd360dadf586d121867cc6c68927cc27">
+    <message>A cut at http://issues.apache.org/bugzilla/show_bug.cgi?id=36925: Using ReflectionToStringBuilder and excluding secure fields.  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@294949 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e6b7d55ebd360dadf586d121867cc6c68927cc27</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="30f3ebc0a8a6bae4bb0650bb2d0f564e89e2186c">
+    <message>Applying Thomas Neidhart's patch for LANG-905; fixing a bug in which EqualsBuilder considers two arrays of the same type to be equal, without considering the contents  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1535653 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/30f3ebc0a8a6bae4bb0650bb2d0f564e89e2186c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DateUtils.java" id="1fb95c93ba93ad713045da7e732bf59c0292c019">
+    <message>Applying 'fix' for LANG-530. DateUtils.parseDate now protects the common use case of FastDateFormat ZZ output, namely ZZ on the end of the pattern, from being passed to SimpleDateFormat as is. Use of ZZ elsewhere in the pattern isn't protected and will want to consider emulating the String changes made in this patch.   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@891572 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1fb95c93ba93ad713045da7e732bf59c0292c019</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="CompareToBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="86b7190ce0359acf0d0022c0c81162f2984d7bdc">
+    <message>Update Null handling in StringUtils to handle nulls quietly   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137444 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/86b7190ce0359acf0d0022c0c81162f2984d7bdc</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="dcdea66eff6cee2cd956e8ad2a92ab3a7c3a2f09">
+    <message>[LANG-380] return when either arg == 0 plus early return when either == 1  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@598705 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/dcdea66eff6cee2cd956e8ad2a92ab3a7c3a2f09</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="f04f0749fff9f3f2c90068356ba1c3e5400d21a0">
+    <message>LANG-992 Fix NumberUtils#isNumber() returns false for "0.0", "0.4790", et al  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1582585 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f04f0749fff9f3f2c90068356ba1c3e5400d21a0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="d2b4ea34f7ab380edf95264bd8a32d4174d0ba3f">
+    <message>getCause(Throwable): Added detection of SQLException and its getNextException() method pointed out by Costin M., Paul Jack, and Nicola Ken Barozzi.  They've also suggested some more general patterns which we're discussing the addition of on the commons-dev@jakarta.apache.org list.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@136964 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d2b4ea34f7ab380edf95264bd8a32d4174d0ba3f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="f4cf865b7c10a52892473eadb1620ab5b78157b4">
+    <message>Optimize the performance of StringUtils.replace bug 36583, from Chris Hyzer  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@279977 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/f4cf865b7c10a52892473eadb1620ab5b78157b4</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="8df113cc1cf9519c16a689bb9a69c3b982138665">
+    <message>Clean up of one method from Nathan Beyer [nbeyer@kc.rr.com]   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@232210 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8df113cc1cf9519c16a689bb9a69c3b982138665</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DateUtils.java" id="bc25cdf764a778a34a8361d18772a90bf697751b">
+    <message>Fix DateUtils.truncate oddity at the far end of the Date spectrum bug 31395, from Marc Portier   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137984 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bc25cdf764a778a34a8361d18772a90bf697751b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FieldUtils.java" id="edd0e3b9e294789421872f4d0b59901e1c401608">
+    <message>[LANG-961] org.apache.commons.lang3.reflect.FieldUtils.removeFinalModifier(Field) does not clean up after itself.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1562991 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/edd0e3b9e294789421872f4d0b59901e1c401608</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ObjectUtils.java" id="0309c35b649773c1bd6bf9c583d42637be176a2f">
+    <message>Javadoc and tests for ObjectUtils   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137494 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0309c35b649773c1bd6bf9c583d42637be176a2f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="47d59745449823c86211a179fe1488e595af363e">
+    <message>short circuit (un)capitalize if string is already (un)capitalized.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1497829 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/47d59745449823c86211a179fe1488e595af363e</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="141cc35d5a255211f7a1e9f12af899ef2f95f59c">
+    <message>LANG-1016: NumberUtils#isParsable method(s). Apply Juan PabloSantos Rodríguez patch for handling negative numbers.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1609898 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/141cc35d5a255211f7a1e9f12af899ef2f95f59c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="bf8041cb432379e3086a1520670da30e1c2b4fe0">
+    <message>Update Javadoc examples Change mid() to accept invalid startPos   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137480 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/bf8041cb432379e3086a1520670da30e1c2b4fe0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ToStringBuilder.java" id="b9ea92e5f483ee95b8be2292fdee04ba4a63ef1a">
+    <message>Apply patch for bug 17250 (http://issues.apache.org/bugzilla/show_bug.cgi?id=17250) with some additional minor improvements.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137262 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/b9ea92e5f483ee95b8be2292fdee04ba4a63ef1a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="BooleanUtils.java" id="b0bb16afecebe9b98188ce2fa7243d7ad24d8f22">
+    <message>Fix Javadoc bug; Improve implementation and tests  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1133336 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/b0bb16afecebe9b98188ce2fa7243d7ad24d8f22</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="38bf7048571f3bc8dd34d14691906426444e4381">
+    <message>https://issues.apache.org/jira/browse/LANG-607 StringUtils.containsAny methods incorrectly matches Unicode 2.0+ supplementary characters.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@922703 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/38bf7048571f3bc8dd34d14691906426444e4381</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ObjectUtils.java" id="34918ebe73b0e0e605d05cd805054f89c003862b">
+    <message>Fix to handle null input array, and remove check for NULL  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@881209 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/34918ebe73b0e0e605d05cd805054f89c003862b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="2c82cb710b1a487e831d35b3c184bac3d950366b">
+    <message>Applying Cedrik Lime's patch to LANG-413; improving the memory footprint of getLevenshteinDistance  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@630580 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/2c82cb710b1a487e831d35b3c184bac3d950366b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="81f10d7f1ef52d44f43b38d81ac3dc1c83d45134">
+    <message>Applying test/fix from LANG-457 - getting a StringIndexOutOfBounds from createNumber rather than a NumberFormatException  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@711605 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/81f10d7f1ef52d44f43b38d81ac3dc1c83d45134</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="552ec504a1771dba838feccf1cd8789e1eabfabd">
+    <message>Better code coverage from Nathan Beyer [nbeyer@kc.rr.com].  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@226597 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/552ec504a1771dba838feccf1cd8789e1eabfabd</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="da0612b348fcfa7679b92a5e9b8e1603e8e2da3a">
+    <message>isNumber(String) and createNumber(String) both modified to support "2.". LANG-521  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@893088 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/da0612b348fcfa7679b92a5e9b8e1603e8e2da3a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EqualsBuilder.java" id="007a8b679574a74f26fe47f2f2ca6b229eea428f">
+    <message>Exclude static fields from reflection based builder   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137031 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/007a8b679574a74f26fe47f2f2ca6b229eea428f</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="EnumUtils.java" id="d51f58ec0488e67f4054dfeaab0f8270643280a2">
+    <message>Javadoc and clarify null handling  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1077977 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d51f58ec0488e67f4054dfeaab0f8270643280a2</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="CharSet.java" id="d363e49668477c6408acae3e638e8b93c9e6dbaa">
+    <message>merge CharSet getInstance/constructor String[] and String forms to String...  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1088339 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d363e49668477c6408acae3e638e8b93c9e6dbaa</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Fraction.java" id="0b2b82ad923b0455cde93286e3f504a1abd0863b">
+    <message>Adding first method check from Math's MathUtils.gcd method; and unit tests showing that this was needed. Bug reported and solved by Christian Semrau [LANG-662]  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1059749 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0b2b82ad923b0455cde93286e3f504a1abd0863b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="e3b207c848737f4a0dd71cf6ca6a9af1e78b56b8">
+    <message>Added a the fix for bug #14883.  Submitted-by: Thomas Hawtin [tackline@tackline.demon.co.uk]   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137168 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e3b207c848737f4a0dd71cf6ca6a9af1e78b56b8</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="e34df07747691c5fc25e4375a5974387bf38771c">
+    <message>Fix setLength()  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@230906 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e34df07747691c5fc25e4375a5974387bf38771c</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LocaleUtils.java" id="e89e8d62b911340cc5b293465cdae909f3dfd640">
+    <message>Applying unit test/fix for LANG-328  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@534277 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e89e8d62b911340cc5b293465cdae909f3dfd640</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastDateParser.java" id="5557b9a23e2971ea31e852857db61cd332b26706">
+    <message>Added missing support for ISO 8601 parsing and printing using "ZZ" pattern (code now matches Javadoc). Addresses LANG-1000.  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1628061 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/5557b9a23e2971ea31e852857db61cd332b26706</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="ea58760e593ebcfca1db1d3d486ad4931afb1e41">
+    <message>Tweak deleteWhitespace to avoid creating a new String if possible   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137685 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/ea58760e593ebcfca1db1d3d486ad4931afb1e41</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumericEntityUnescaper.java" id="c5283881e4ff7c040d5ca31a852bc89f2bcf2eef">
+    <message>Making unescapeHtml _NOT_ escape unfinished numeric entities by default (it ignores them); however adding options that will fire an exception or unescape the numeric entity. LANG-710  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1143641 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c5283881e4ff7c040d5ca31a852bc89f2bcf2eef</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastDateParser.java" id="c45d5bff75edfef6387d40e681f9dc7c9b517bbb">
+    <message>LANG-832 FastDateParser does not handle unterminated quotes correctly  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1390795 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c45d5bff75edfef6387d40e681f9dc7c9b517bbb</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="RandomStringUtils.java" id="c9d786a4fe2639581047d878a64bab6fb24f1ab3">
+    <message>LANG-805 RandomStringUtils.random(count, 0, 0, false, false, universe, random) always throws java.lang.ArrayIndexOutOfBoundsException  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1348422 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c9d786a4fe2639581047d878a64bab6fb24f1ab3</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="UnicodeEscaper.java" id="71b3d77b41c16b6abefbb108dbd1943df26a303d">
+    <message>Rather than writing specific translators to handle unicode between different ranges, UnicodeEscaper now supports a range filter. cf LANG-505  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@788244 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/71b3d77b41c16b6abefbb108dbd1943df26a303d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="c952cd0b17f6bb3ba277b534099a8f5910a1fa2d">
+    <message>Improved performance if str is null.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137672 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/c952cd0b17f6bb3ba277b534099a8f5910a1fa2d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ExceptionUtils.java" id="53618a20ee595ec4e49967426aaa5019e636d79b">
+    <message>o Improved getThrowableCount(Throwable) to return zero when passed a null argument.  o Added @param JavaDoc for methods added during last commit.   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@136976 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/53618a20ee595ec4e49967426aaa5019e636d79b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="ClassUtils.java" id="4d3629f310e84cc24c0e5f09d97f5126692d0128">
+    <message>Applying my patch from LANG-535 - adding support to getShortClassName and getPackageName for arrays, including primitive arrays and multi-dimensional arrays. Also stopped getPackageName relying on the underlying class.getPackage as it's sometimes null  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@825420 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4d3629f310e84cc24c0e5f09d97f5126692d0128</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StopWatch.java" id="3ef8a796b5ddf87e3e9afec9ba94aac62681b394">
+    <message>Applying test and fix for LANG-315  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@504351 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3ef8a796b5ddf87e3e9afec9ba94aac62681b394</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="TypeUtils.java" id="0ce1a4db98e3ea909f52cf3408f579758b0216a5">
+    <message>null-guard  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1525740 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/0ce1a4db98e3ea909f52cf3408f579758b0216a5</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="UnicodeUnescaper.java" id="e69ce5122453f385a17124d0a25600909837132b">
+    <message>Implementing an option to UnicodeUnescaper in which the syntax '\u+0047' is supported. By default it remains unsupported to match Java's method of parsing. Request in LANG-507  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@826370 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/e69ce5122453f385a17124d0a25600909837132b</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Enum.java" id="879068feedf160748808c92b3280fe58fb78174d">
+    <message>Ensure that duplicate enums cannot be created Bug found by Howard Lewis Ship   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137108 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/879068feedf160748808c92b3280fe58fb78174d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StrBuilder.java" id="d5e343049c2610c31ddacb24f0d173942f6d5ac9">
+    <message>Applying my patch from LANG-412; fixing Peter Oxenham's report that the appendFixedWidthPadRight and appendFixedWidthPadLeft are not null safe if the nullText has not been set  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@627248 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d5e343049c2610c31ddacb24f0d173942f6d5ac9</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="Entities.java" id="1313a65c11dea54f1baf492d4185fb2d673b6716">
+    <message>Applying unit test and fix for #LANG-292. Also fixes a couple of problems with the unescape(Writer..) overload that came up  git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@469661 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/1313a65c11dea54f1baf492d4185fb2d673b6716</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="DurationFormatUtils.java" id="3a20cc04b5050ca1087056c7e6d153f9d3a51ae0">
+    <message>LANG-981 DurationFormatUtils#lexx does not detect unmatched quote char  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1573770 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/3a20cc04b5050ca1087056c7e6d153f9d3a51ae0</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="StringUtils.java" id="d3a0da63111207adc0da2790152cc8dabc00409a">
+    <message>Fix replaceChars() to complete bug 25454   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137826 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/d3a0da63111207adc0da2790152cc8dabc00409a</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastDateParser.java" id="4b28bdf80261609da56e554b3a656c9c6656be07">
+    <message>Don't save short eras if they are the same as the long eras  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1390811 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/4b28bdf80261609da56e554b3a656c9c6656be07</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="8233881022b0f11e8bb37c9a8c708ec165ef35d3">
+    <message>Redo null/empty string checking for performance   git-svn-id: https://svn.apache.org/repos/asf/jakarta/commons/proper/lang/trunk@137522 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/8233881022b0f11e8bb37c9a8c708ec165ef35d3</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="WordUtils.java" id="6c0312795ff7769ef410a8a56ca6670983162afb">
+    <message>LANG-995: Fix bug with stripping spaces on last line in WordUtils.wrap(). This fixes #18 from github. Thanks to Andrey Khobnya  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1586649 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/6c0312795ff7769ef410a8a56ca6670983162afb</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="NumberUtils.java" id="266b9b834b2b44c77fb9886938ce99bb1c148858">
+    <message>LANG-971 NumberUtils#isNumber(String) fails to reject invalid Octal numbers  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1566967 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/266b9b834b2b44c77fb9886938ce99bb1c148858</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="LocaleUtils.java" id="09d39029b16dee61022dc8afde4d84f523f37813">
+    <message>LANG-879 LocaleUtils test fails with new Locale "ja_JP_JP_#u-ca-japanese" of JDK7  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1488038 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/09d39029b16dee61022dc8afde4d84f523f37813</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="FastDateParser.java" id="19b86ba4e1599bdbe248268f1a4ec47206abc77d">
+    <message>LANG-828 FastDateParser does not handle non-Gregorian calendars properly   git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1389976 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/19b86ba4e1599bdbe248268f1a4ec47206abc77d</link>
+    <actions/>
+  </commitFile>
+  <commitFile file="OctalUnescaper.java" id="43b0e8d9b993d389e6cfbd90ab562a2c9c8d214a">
+    <message>Applying github pull request https://github.com/apache/commons-lang/pull/5, linked as LANG-928, fixing a bug in OctalEscaper trying to parse octal numbers longer than 3 digits  git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1535911 13f79535-47bb-0310-9956-ffa450edef68 </message>
+    <link>https://github.com/apache/commons-lang/commit/43b0e8d9b993d389e6cfbd90ab562a2c9c8d214a</link>
+    <actions/>
+  </commitFile>
+</data>
