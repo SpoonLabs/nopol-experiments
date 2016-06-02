@@ -1,16 +1,17 @@
 # Nopol Dataset
 
-This data set is a supplemental material of our project NOPOL.
+This contains the experimental data of project NOPOL. The source code of Nopol is at <https://github.com/SpoonLabs/nopol/>. The main publication is at <http://hal.archives-ouvertes.fr/hal-01285008/>.
 
-Nopol in GitHub, <https://github.com/SpoonLabs/nopol/>
+Architecture:
 
-Nopol paper, <http://hal.archives-ouvertes.fr/hal-01285008/>
+* bug metadata in `data/projects/*/project.json` and `data/projects/*/bugs/*.json`. The metadata is used by helper scripts
+* helper Python scripts in `src` to create the dataset, compile it, run it, create additional files
+* information about the benchmark in `data/projects/*/patch/*`.
 
-## Reproduce
+## Reproduce the experiment
 
 To run Nopol, you need Java and JavaC version 7 and the Z3 SMT solver.
-We use java version "1.7.0_79".
-We use Z3 4.3.3 (see `data/lib/z3`).
+We use java version "1.7.0_79" and  Z3 4.3.3 (see `data/lib/z3`).
 Note that changing to another Java or Z3 version may lead to different patches from the ones in our paper. 
 
 ```bash
