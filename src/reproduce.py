@@ -41,13 +41,13 @@ def execute(bug, solverPath):
     source = os.path.join(pathBug, bug.data['path']['source'])
     # java -jar <nopol-jar-file> nopol <source path> <class path> z3|cvc4 <solver-path> [<test-class-name>...]
     cmd = """
-java -Xms128m -Xmx1024m -jar %s nopol %s %s z3 %s %s
+./call_nopol.sh %s %s %s %s
 """ % (
-        os.path.join(conf.pathLib, "nopol.jar"),
-        source,
-        bug.getClasspath(conf.pathDataset),
-        solverPath,
-        tests)
+        source, # $1 source folder
+        bug.getClasspath(conf.pathDataset),  # $1 concatenated classpath folder
+        solverPath, # $3 solverpath
+        tests # $4 concatenated tests to be executed
+        )
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
     patchFound = False
