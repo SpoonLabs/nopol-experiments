@@ -119,3 +119,4 @@ if __name__ == '__main__':
     print("\n\n%d patches found" % len(patches))
     for bug in sorted(patches):
         print colored("%s: %s" % (bug, patches[bug]), [bcolors.OKGREEN, bcolors.BOLD])
+    if len(patches) == 0: sys.exit(-1)
