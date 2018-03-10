@@ -11,7 +11,7 @@
 	"java": {
 		"version": "1.4"
 	},
-	"type": "condition",
+	"type": "precondition",
 	"dependencies": [
 		"junit-3.8.jar"
 	],

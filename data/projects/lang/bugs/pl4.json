@@ -11,7 +11,7 @@
 	"java": {
 		"version": "1.7"
 	},
-	"type": "condition",
+	"type": "precondition",
 	"dependencies": [
 		"easymock-2.5.2.jar",
 		"junit-4.10.jar"
