@@ -105,6 +105,7 @@ if __name__ == '__main__':
     patches = {}
     conf.silence = args.silence
     if args.bug.lower() == "all":
+        # cl6 is not here because it is not repaired
         for bug in ["cm1", "cm2", "cm3", "cm4", "cm5", "cm6", "cm7", "cm10",
                     "cl1", "cl2", "cl3", "cl4", "cl5", "pm1", "pm2", "pl1",
                     "pl2", "pl4"]:

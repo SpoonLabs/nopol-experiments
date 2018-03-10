@@ -17,6 +17,6 @@
 		"easymock-2.5.2.jar"
 	],
 	"tests": [
-		"org.apache.commons.lang.text.StrBuilderTest"
+		"org.apache.commons.lang3.StringUtilsIsTest"
 	]
 }
