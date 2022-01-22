@@ -3,11 +3,11 @@
 import os
 import subprocess
 
-import Bug
-import Repository
-from Config import conf
+from . import Bug
+from . import Repository
+from .Config import conf
 
-for id in xrange(1, 11):
+for id in range(1, 11):
     id = "cm%d" % id
     patchPath = os.path.join(conf.pathProjectData, "math/patch", id)
     bug = Bug.Bug("math", id)

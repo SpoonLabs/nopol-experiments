@@ -53,7 +53,7 @@ def initDataset(datasetLocation, compile):
         os.makedirs(datasetLocation)
     projects = getProjects()
     bugs = getBugs(projects)
-    print projects
+    print(projects)
     for bug in bugs:
         bug.initBug(bug.project.data['repo'], datasetLocation)
         if compile:

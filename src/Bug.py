@@ -153,7 +153,7 @@ javac -source %s -d target/classes -g -encoding cp1252 -classpath %s %s""" % (
         classpath, sourceFiles)
         response = subprocess.call(cmd, shell=True)
         if response != 0:
-            print "Compilation error: %s" % self.id
+            print("Compilation error: %s" % self.id)
             return
         cmd = """cd %s
 javac -source %s -d target/test-classes -g -encoding cp1252 -classpath %s %s""" % (

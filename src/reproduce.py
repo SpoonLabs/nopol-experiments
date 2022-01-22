@@ -31,9 +31,9 @@ def execute(bug, solverPath):
     if os.path.isdir(os.path.join(pathBug, "target")):
         shutil.rmtree(os.path.join(pathBug, "target"))
     # compile the bug
-    print colored("Compiling the bug %s" % bug.id, [bcolors.BOLD])
+    print(colored("Compiling the bug %s" % bug.id, [bcolors.BOLD]))
     bug.compile(conf.pathDataset)
-    print colored("Repairing the bug %s" % bug.id, [bcolors.BOLD])
+    print(colored("Repairing the bug %s" % bug.id, [bcolors.BOLD]))
     tests = ""
     if 'tests' in bug.data:
         for test in bug.data['tests']:
@@ -75,9 +75,9 @@ def execute(bug, solverPath):
             sys.stdout.write(nextline)
             sys.stdout.flush()
     if patch != "":
-        print colored("%s: %s" % (bug.id, patch), [bcolors.OKGREEN, bcolors.BOLD])
+        print(colored("%s: %s" % (bug.id, patch), [bcolors.OKGREEN, bcolors.BOLD]))
     else:
-        print colored("No patch for %s" % (bug.id), [bcolors.FAIL, bcolors.BOLD])
+        print(colored("No patch for %s" % (bug.id), [bcolors.FAIL, bcolors.BOLD]))
     return patch
 
 
@@ -117,7 +117,7 @@ if __name__ == '__main__':
         if patch != "":
             patches[args.bug] = patch
 
-    print("\n\n%d patches found" % len(patches))
+    print(("\n\n%d patches found" % len(patches)))
     for bug in sorted(patches):
-        print colored("%s: %s" % (bug, patches[bug]), [bcolors.OKGREEN, bcolors.BOLD])
+        print(colored("%s: %s" % (bug, patches[bug]), [bcolors.OKGREEN, bcolors.BOLD]))
     if len(patches) == 0: sys.exit(-1)
