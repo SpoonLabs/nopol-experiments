@@ -53,7 +53,7 @@ def execute(bug, solverPath):
     patchFound = False
     patch = ""
     while True:
-        nextline = process.stdout.readline()
+        nextline = process.stdout.readline().decode("utf8")
         if nextline == '' and process.poll() != None:
             break
         if patchFound:
